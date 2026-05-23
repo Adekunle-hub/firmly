@@ -1,0 +1,68 @@
+import { Plan } from "./types";
+
+export const PLANS: Plan[] = [
+  {
+    id: "start",
+    price: "0",
+    period: "/month",
+    name: "Firmly Start",
+    desc: "Solo lawyers testing the waters",
+    features: [
+      "1 user",
+      "Up to 2 active cases",
+      "Basic case management",
+      "Basic document uploads (250MB limit)",
+      "Calendar & event reminders",
+      "Basic support (email only)",
+    ],
+  },
+  {
+    id: "solo",
+    price: "10,000",
+    period: "/month per user",
+    name: "Tier 1 - Firmly Solo",
+    desc: "Solo practitioners or very small firms",
+    features: [
+      "Everything in Freemium +",
+      "Up to 20 cases",
+      "Document templates",
+      "5GB secure file storage",
+      "AI-assisted legal research (limited credits)",
+      "Chat & email support",
+    ],
+  },
+  {
+    id: "team",
+    price: "18,000",
+    period: "/month per user",
+    name: "Tier 2 - Firmly Team",
+    desc: "Small law firms (2-5 users)",
+    features: [
+      "Everything in Solo +",
+      "Unlimited cases",
+      "Team collaboration",
+      "Shared calendar & team events",
+      "Document versioning & audit trail",
+      "AI legal research with higher credits",
+      "20GB storage",
+      "Basic analytics & reports",
+      "Priority support",
+    ],
+  },
+  {
+    id: "practice",
+    price: "25,000",
+    period: "/month per user",
+    name: "Tier 3 - Firmly Practice",
+    desc: "Medium-sized law firms (6+ users)",
+    features: [
+      "Everything in Team +",
+      "Role-based access control",
+      "Custom intake forms & client workflows",
+      "Custom document automations",
+      "Dedicated account manager",
+      "Onboarding support & training",
+      "100GB storage or more",
+    ],
+  },
+];
