@@ -1,10 +1,23 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import { TaskBoard } from "./TaskBoard";
-import { LinkCalendarModal } from "./LinkCalendarModal";
-import { CreateTaskModal } from "./CreateTaskModal";
-import { CreateEventModal } from "./CreateEventModal";
+import CreateTaskModal, { TaskItem } from "./calendar/CreateTaskModal"; // 1. Imported TaskItem type
+import LinkCalendarModal from "./calendar/LinkCalendarModal";
 
 export default function CalendarAndTaskPage() {
+  const [isCalendarModalOpen, setIsCalendarModalOpen] = useState(false);
+
+  // 2. Set up visibility state for the task modal
+  const [isTaskModalOpen, setIsTaskModalOpen] = useState(false);
+
+  // 3. Optional: Define a handler to save or log the new task item
+  const handleCreateTask = (newTask: TaskItem) => {
+    console.log("New task created successfully:", newTask);
+    // If you have a task list state locally or a state management hook/API context, 
+    // you would append it here (e.g., setTasks(prev => [...prev, newTask]))
+  };
+
   return (
     <div className="flex flex-col h-full">
       <header className="flex items-center justify-between p-4 border-b border-gray-200">
@@ -13,8 +26,20 @@ export default function CalendarAndTaskPage() {
           <p className="text-sm text-gray-500">Manage court dates, deadlines, meetings, and team tasks.</p>
         </div>
         <div className="flex space-x-4">
-          <button className="btn btn-secondary">Link Calendar</button>
-          <button className="btn btn-primary">Create New</button>
+          <button
+            className="btn btn-secondary"
+            onClick={() => setIsCalendarModalOpen(true)}
+          >
+            Link Calendar
+          </button>
+
+          {/* 4. Trigger the task modal state here */}
+          <button
+            className="btn btn-primary"
+            onClick={() => setIsTaskModalOpen(true)}
+          >
+            Create New
+          </button>
         </div>
       </header>
 
@@ -29,9 +54,18 @@ export default function CalendarAndTaskPage() {
         </div>
       </main>
 
-      <LinkCalendarModal />
-      <CreateTaskModal />
-      <CreateEventModal />
+      <LinkCalendarModal
+        isOpen={isCalendarModalOpen}
+        onClose={() => setIsCalendarModalOpen(false)}
+      />
+
+      {/* 5. Pass all required properties to satisfy CreateTaskModalProps */}
+      <CreateTaskModal
+        isOpen={isTaskModalOpen}
+        onClose={() => setIsTaskModalOpen(false)}
+        onCreateTask={handleCreateTask}
+      />
+
     </div>
   );
 }
