@@ -9,7 +9,8 @@ interface TaskCardProps {
   onClick: () => void;
 }
 
-const PRIORITY_STYLES = {
+// Fixed by explicitly typing the object keys to match TaskItem['priority']
+const PRIORITY_STYLES: Record<TaskItem["priority"], { bg: string; text: string; badge: string }> = {
   low: {
     bg: "bg-blue-50 border-blue-100",
     text: "text-blue-700",
@@ -47,7 +48,7 @@ export default function TaskCard({ task, onClick }: TaskCardProps) {
     <button
       onClick={onClick}
       className={cn(
-        "text-left p-3.5 rounded-xl border transition-all cursor-pointer group",
+        "text-left p-3.5 rounded-xl border transition-all cursor-pointer group w-full",
         "hover:shadow-md hover:border-slate-300",
         "bg-white border-slate-200"
       )}
