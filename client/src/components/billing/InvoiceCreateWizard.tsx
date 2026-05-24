@@ -531,7 +531,7 @@ export default function InvoiceCreateWizard({
               </div>
 
               <div>
-                <label className="text-[10px] font-bold text-[#1A4331] uppercase tracking-wider block mb-1.5 font-extrabold">Select Client *</label>
+                <label className="text-[10px] font-bold text-[#1A4331] uppercase tracking-wider block mb-1.5 ">Select Client *</label>
                 <Select value={clientName} onValueChange={handleClientChange}>
                   <SelectTrigger className="h-10 text-sm border-slate-200 rounded-lg bg-white">
                     <SelectValue placeholder="Select client" />
@@ -547,7 +547,7 @@ export default function InvoiceCreateWizard({
               </div>
 
               <div>
-                <label className="text-[10px] font-bold text-[#1A4331] uppercase tracking-wider block mb-1.5 font-extrabold">Select Matter/Case *</label>
+                <label className="text-[10px] font-bold text-[#1A4331] uppercase tracking-wider block mb-1.5 ">Select Matter/Case *</label>
                 <Select value={caseTitle} onValueChange={handleCaseChange} disabled={!clientName}>
                   <SelectTrigger className="h-10 text-sm border-slate-200 rounded-lg bg-white disabled:opacity-50">
                     <SelectValue placeholder={clientName ? "Select case/matter" : "Choose a client first"} />
@@ -630,7 +630,7 @@ export default function InvoiceCreateWizard({
 
             {billingTrigger === "mixed" && (
               <div className="p-4 bg-slate-50 border border-slate-200/80 rounded-xl space-y-2.5 animate-in slide-in-from-top-1.5 duration-200">
-                <label className="text-[10px] font-bold text-[#1A4331] uppercase tracking-wider block font-extrabold">Select Mixed Sub-Types *</label>
+                <label className="text-[12px] font-bold text-[#1A4331] uppercase tracking-wider block">Select Mixed Sub-Types *</label>
                 <div className="flex flex-wrap gap-6 pt-1">
                   <label className="flex items-center gap-2.5 text-sm font-bold text-slate-700 cursor-pointer select-none">
                     <input
@@ -660,7 +660,7 @@ export default function InvoiceCreateWizard({
                     Contingency
                   </label>
                 </div>
-                <p className="text-[10px] text-slate-400 font-semibold italic leading-snug">
+                <p className="text-[12px] text-slate-400 font-semibold italic leading-snug">
                   Select all the billing components that make up this mixed invoice.
                 </p>
               </div>
@@ -691,7 +691,7 @@ export default function InvoiceCreateWizard({
 
                 {billingTrigger === "retainer" && (
                   <div className="animate-in fade-in duration-200">
-                    <label className="text-[10px] font-bold text-slate-500 uppercase tracking-wider block mb-1.5">Retainer Amount (₦)</label>
+                    <label className="text-[12px] font-bold text-slate-500 uppercase tracking-wider block mb-1.5">Retainer Amount (₦)</label>
                     <div className="relative">
                       <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-sm font-bold text-slate-400">₦</span>
                       <Input
@@ -709,7 +709,7 @@ export default function InvoiceCreateWizard({
                   <div className="space-y-4 animate-in fade-in duration-200">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
-                        <label className="text-[10px] font-bold text-slate-500 uppercase tracking-wider block mb-1.5">Contingency Percentage (%)</label>
+                        <label className="text-[12px] font-bold text-slate-500 uppercase tracking-wider block mb-1.5">Contingency Percentage (%)</label>
                         <Input
                           type="number"
                           value={contingencyPercentage}
@@ -722,7 +722,7 @@ export default function InvoiceCreateWizard({
                         </p>
                       </div>
                       <div>
-                        <label className="text-[10px] font-bold text-slate-500 uppercase tracking-wider block mb-1.5">Expected Claim Recovery Value (₦)</label>
+                        <label className="text-[12px] font-bold text-slate-500 uppercase tracking-wider block mb-1.5">Expected Claim Recovery Value (₦)</label>
                         <div className="relative">
                           <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-sm font-bold text-slate-400">₦</span>
                           <Input
@@ -740,7 +740,7 @@ export default function InvoiceCreateWizard({
 
                 {billingTrigger === "statutory" && (
                   <div className="animate-in fade-in duration-200">
-                    <label className="text-[10px] font-bold text-slate-500 uppercase tracking-wider block mb-1.5">Statutory Fee Allocation (₦)</label>
+                    <label className="text-[12px] font-bold text-slate-500 uppercase tracking-wider block mb-1.5">Statutory Fee Allocation (₦)</label>
                     <div className="relative">
                       <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-sm font-bold text-slate-400">₦</span>
                       <Input
@@ -756,7 +756,7 @@ export default function InvoiceCreateWizard({
 
                 {billingTrigger === "mixed" && (
                   <div className="animate-in fade-in duration-200">
-                    <label className="text-[10px] font-bold text-slate-500 uppercase tracking-wider block mb-1.5">Blended Mixed Invoice Value (₦)</label>
+                    <label className="text-[12px] font-bold text-slate-500 uppercase tracking-wider block mb-1.5">Blended Mixed Invoice Value (₦)</label>
                     <div className="relative">
                       <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-sm font-bold text-slate-400">₦</span>
                       <Input
@@ -885,7 +885,7 @@ export default function InvoiceCreateWizard({
                 
                 {payInInstallments && (
                   <div className="space-y-2.5 pt-2 border-t border-slate-100 animate-in fade-in duration-200">
-                    <label className="text-[10px] font-bold text-slate-500 uppercase block">Number of Installments</label>
+                    <label className="text-[12px] font-bold text-slate-500 uppercase block">Number of Installments</label>
                     <Select value={installmentCount} onValueChange={setInstallmentCount}>
                       <SelectTrigger className="h-9 text-sm border-slate-200 bg-white">
                         <SelectValue />
@@ -898,7 +898,7 @@ export default function InvoiceCreateWizard({
                     </Select>
 
                     <div className="space-y-1.5 pt-2">
-                      <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wide">Expected Milestones Schedule</p>
+                      <p className="text-[12px] font-bold text-slate-400 uppercase tracking-wide">Expected Milestones Schedule</p>
                       {getInstallmentMilestones().map((m, idx) => (
                         <div key={idx} className="flex justify-between items-center p-2 bg-slate-50 rounded-lg border border-slate-100 text-[11px]">
                           <span className="font-bold text-slate-700">{m.name}</span>
@@ -938,19 +938,19 @@ export default function InvoiceCreateWizard({
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm bg-slate-50/70 p-4 rounded-xl border border-slate-100">
               <div>
-                <span className="text-[10px] font-bold text-slate-400 uppercase block mb-1">Law Firm Reference</span>
+                <span className="text-[12px] font-bold text-slate-400 uppercase block mb-1">Law Firm Reference</span>
                 <p className="font-mono font-bold text-slate-900">{invoiceNumber}</p>
                 <p className="text-slate-500 mt-1 font-medium">Issue Date: {issuedDate}</p>
                 <p className="text-slate-500 font-medium">Due Date: {dueDate}</p>
               </div>
               <div>
-                <span className="text-[10px] font-bold text-slate-400 uppercase block mb-1">Debtor / Client Details</span>
+                <span className="text-[12px] font-bold text-slate-400 uppercase block mb-1">Debtor / Client Details</span>
                 <p className="font-extrabold text-slate-900">{clientName}</p>
                 <p className="text-slate-500 mt-0.5 font-medium">{clientEmail}</p>
                 <p className="text-slate-500 font-medium">{clientPhone}</p>
               </div>
               <div>
-                <span className="text-[10px] font-bold text-slate-400 uppercase block mb-1">Assigned Case / Matter</span>
+                <span className="text-[12px] font-bold text-slate-400 uppercase block mb-1">Assigned Case / Matter</span>
                 <p className="font-extrabold text-slate-800">{caseTitle}</p>
                 <p className="font-mono text-slate-500 text-[11px] mt-0.5">{suitNumber}</p>
                 <p className="text-slate-500 font-semibold mt-1">Arrangement: <span className="text-[#1A4331]">{displayBillingType}</span></p>
@@ -978,9 +978,9 @@ export default function InvoiceCreateWizard({
                         <TableCell className="font-medium text-slate-800 text-sm py-3">{row.item}</TableCell>
                         <TableCell className="text-center py-3">
                           {row.isTaxable ? (
-                            <span className="text-[10px] font-extrabold px-2 py-0.5 bg-emerald-50 border border-emerald-200 text-emerald-700 rounded-md">7.5% VAT</span>
+                            <span className="text-[12px] font-extrabold px-2 py-0.5 bg-emerald-50 border border-emerald-200 text-emerald-700 rounded-md">7.5% VAT</span>
                           ) : (
-                            <span className="text-[10px] font-semibold px-2 py-0.5 bg-slate-100 text-slate-500 rounded-md">Exempt</span>
+                            <span className="text-[12px] font-semibold px-2 py-0.5 bg-slate-100 text-slate-500 rounded-md">Exempt</span>
                           )}
                         </TableCell>
                         <TableCell className="text-center font-semibold text-slate-700 text-sm py-3">{qty}</TableCell>

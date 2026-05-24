@@ -9,7 +9,7 @@ export default function AuthLayout({ children }) {
         className="absolute inset-0 h-full w-full object-cover object-center"
         loading="eager"
       />
-      <div className="relative z-10 w-full flex flex-col items-center justify-center min-h-screen px-4">
+      <div className="relative z-10 w-full flex flex-col items-center justify-center min-h-screen  sm:px-2 px-0 md:px-4">
         {children}
       </div>
     </div>

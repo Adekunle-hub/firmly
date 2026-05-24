@@ -159,7 +159,7 @@ export default function SignupPage() {
           </p>
         </div>
 
-        <div className="flex gap-5 w-full max-w-4xl mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2  gap-5 w-full max-w-4xl mb-8">
           {[
             {
               id: "law-firm",

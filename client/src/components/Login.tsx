@@ -66,7 +66,7 @@ function OtpInput({
           value={d}
           onChange={(e) => handleChange(e, i)}
           onKeyDown={(e) => handleKeyDown(e, i)}
-          className={`w-15 h-15 rounded-sm border text-white text-2xl font-semibold text-center outline-none transition-colors
+          className={`w-10 h-10 md:w-15 md:h-15 rounded-sm border text-white text-2xl font-semibold text-center outline-none transition-colors
             ${
               hasError
                 ? "bg-red-950/40 border-red-500 focus:border-red-400 focus:ring-1 focus:ring-red-400"
@@ -201,7 +201,7 @@ export default function LoginPage() {
 
   if (step === 0) {
     return (
-      <main className="w-full flex flex-col items-center py-4 md:py-10">
+      <main className="w-full md:max-w-xl justify-center mx-auto flex flex-col items-center py-4 md:py-10">
         <div className="mb-2 md:mb-6 flex flex-col items-center text-center">
           <FirmlyLogo />
           <h1 className="mt-3 text-[32px] font-bold text-white leading-tight tracking-tight">
@@ -332,7 +332,7 @@ export default function LoginPage() {
 
       <form
         onSubmit={handleFinalAuthSubmit}
-        className="w-full max-w-150 rounded-2xl bg-white/8 backdrop-blur-md border border-white/10 md:px-12 px-4 sm:px-8 py-8 flex flex-col gap-6"
+        className="w-full max-w-150 rounded-2xl bg-white/8 backdrop-blur-md border border-white/10 md:px-12 px-2  sm:px-8 py-8 flex flex-col gap-6"
       >
         <div className="text-center">
           <h2 className="text-2xl font-medium text-white mb-1">

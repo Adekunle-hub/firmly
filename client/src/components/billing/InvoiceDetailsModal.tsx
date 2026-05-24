@@ -137,7 +137,7 @@ export default function InvoiceDetailsModal({
         <div className="flex-1 overflow-y-auto p-6 md:p-8 no-scrollbar bg-slate-100/50 print:bg-white print:p-0">
           <div 
             ref={printAreaRef}
-            className="bg-white shadow-md rounded-2xl p-6 md:p-8 border border-slate-200/60 text-slate-700 max-w-xl mx-auto min-h-[750px] flex flex-col justify-between print:shadow-none print:border-0 print:rounded-none"
+            className="bg-white shadow-md rounded-2xl p-6 md:p-8 border border-slate-200/60 text-slate-700 max-w-xl mx-auto min-h-187.5 flex flex-col justify-between print:shadow-none print:border-0 print:rounded-none"
           >
             <div>
               {/* Letterhead Header */}
@@ -225,7 +225,7 @@ export default function InvoiceDetailsModal({
                         const amount = calculateItemTotal(item);
                         return (
                           <tr key={idx} className="border-b border-slate-100 text-slate-650 font-semibold">
-                            <td className="py-2.5 max-w-[200px] truncate">{item.item || "Legal Representation Services"}</td>
+                            <td className="py-2.5 max-w-50 truncate">{item.item || "Legal Representation Services"}</td>
                             <td className="py-2.5 text-center">{item.quantity || "1"}</td>
                             <td className="py-2.5 text-right">{formatCurrency(parseFloat(item.unitPrice) || 0)}</td>
                             <td className="py-2.5 text-right text-slate-800 font-bold">{formatCurrency(amount)}</td>

@@ -1,3 +1,4 @@
+import Bounded from '@/components/Bounded'
 import SignupPage from '@/components/SignUp'
 
 
@@ -5,8 +6,10 @@ type Props = {}
 
 const Page = (props: Props) => {
   return (
-
-    <SignupPage/>
+<Bounded>
+ <SignupPage/>
+</Bounded>
+   
   )
 }
 
