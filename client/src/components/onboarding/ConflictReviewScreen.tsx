@@ -31,7 +31,7 @@ export default function ConflictReviewScreen({
       <button
         type="button"
         onClick={onCancel}
-        className="flex items-center gap-1.5 text-xs font-bold text-slate-500 hover:text-slate-800 transition-colors w-fit cursor-pointer"
+        className="flex items-center gap-1.5 text-sm font-bold text-slate-500 hover:text-slate-800 transition-colors w-fit cursor-pointer"
       >
         <ChevronLeft className="w-4 h-4" />
         Go back
@@ -48,7 +48,7 @@ export default function ConflictReviewScreen({
         <AlertCircle className="w-5 h-5 shrink-0 text-rose-600 mt-0.5" />
         <div>
           <p className="text-[13px] font-bold">Confirmed Conflict</p>
-          <p className="text-xs text-rose-700/90 mt-1 leading-relaxed">
+          <p className="text-sm text-rose-700/90 mt-1 leading-relaxed">
             This case has been flagged for a potential conflict of interest. Please review the details below and select a resolution option.
           </p>
         </div>
@@ -58,22 +58,22 @@ export default function ConflictReviewScreen({
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         <div className="flex flex-col gap-1">
           <label className="text-[11.5px] font-bold text-slate-400 uppercase tracking-wide">Relationship with client/case</label>
-          <Input value="Lawyer previously represented Zenith Bank" disabled className="bg-slate-50 text-slate-600 font-semibold text-xs h-9 rounded-xl border-slate-100" />
+          <Input value="Lawyer previously represented Zenith Bank" disabled className="bg-slate-50 text-slate-600 font-semibold text-sm h-9 rounded-xl border-slate-100" />
         </div>
 
         <div className="flex flex-col gap-1">
           <label className="text-[11.5px] font-bold text-slate-400 uppercase tracking-wide">Role</label>
-          <Input value="Former legal rep (conflict of prior representation)" disabled className="bg-slate-50 text-slate-600 font-semibold text-xs h-9 rounded-xl border-slate-100" />
+          <Input value="Former legal rep (conflict of prior representation)" disabled className="bg-slate-50 text-slate-600 font-semibold text-sm h-9 rounded-xl border-slate-100" />
         </div>
 
         <div className="flex flex-col gap-1">
           <label className="text-[11.5px] font-bold text-slate-400 uppercase tracking-wide">Conflict Type</label>
-          <Input value="Direct" disabled className="bg-slate-50 text-slate-600 font-semibold text-xs h-9 rounded-xl border-slate-100" />
+          <Input value="Direct" disabled className="bg-slate-50 text-slate-600 font-semibold text-sm h-9 rounded-xl border-slate-100" />
         </div>
 
         <div className="flex flex-col gap-1">
           <label className="text-[11.5px] font-bold text-slate-400 uppercase tracking-wide">Client Name</label>
-          <Input value={clientName} disabled className="bg-slate-50 text-slate-600 font-semibold text-xs h-9 rounded-xl border-slate-100" />
+          <Input value={clientName} disabled className="bg-slate-50 text-slate-600 font-semibold text-sm h-9 rounded-xl border-slate-100" />
         </div>
 
         <div className="md:col-span-2 flex flex-col gap-1">
@@ -82,7 +82,7 @@ export default function ConflictReviewScreen({
             rows={2}
             value="Lawyer previously advised Zenith Bank in a debt restructuring case in 2024."
             disabled
-            className="w-full rounded-xl border border-slate-100 bg-slate-50 p-2.5 text-xs text-slate-600 font-semibold resize-none"
+            className="w-full rounded-xl border border-slate-100 bg-slate-50 p-2.5 text-sm text-slate-600 font-semibold resize-none"
           />
         </div>
 
@@ -90,11 +90,11 @@ export default function ConflictReviewScreen({
         <div className="md:col-span-2 flex flex-col gap-1.5">
           <label className="text-[11.5px] font-bold text-slate-400 uppercase tracking-wide">Related Cases</label>
           <div className="border border-slate-100 rounded-xl bg-slate-50/30 p-3 flex flex-col gap-2">
-            <div className="flex items-center gap-2 text-xs text-slate-600">
+            <div className="flex items-center gap-2 text-sm text-slate-600">
               <FileText className="w-4 h-4 text-slate-400 shrink-0" />
               <span>Zenith Bank v. Lagos State (2024)</span>
             </div>
-            <div className="flex items-center gap-2 text-xs text-slate-600">
+            <div className="flex items-center gap-2 text-sm text-slate-600">
               <FileText className="w-4 h-4 text-slate-400 shrink-0" />
               <span>Zenith Bank Debt Restructuring (2023)</span>
             </div>
@@ -119,7 +119,7 @@ export default function ConflictReviewScreen({
               {resolution === "false_positive" && <span className="h-2.5 w-2.5 rounded-full bg-emerald-600" />}
             </div>
             <div>
-              <p className="text-xs font-bold text-slate-800">No Conflict (False Positive)</p>
+              <p className="text-sm font-bold text-slate-800">No Conflict (False Positive)</p>
               <p className="text-[11px] text-slate-400 mt-0.5">Mark this as a false alarm and proceed with the case normally.</p>
             </div>
           </div>
@@ -136,7 +136,7 @@ export default function ConflictReviewScreen({
               {resolution === "waiver" && <span className="h-2.5 w-2.5 rounded-full bg-emerald-600" />}
             </div>
             <div>
-              <p className="text-xs font-bold text-slate-800">Proceed with Waiver</p>
+              <p className="text-sm font-bold text-slate-800">Proceed with Waiver</p>
               <p className="text-[11px] text-slate-400 mt-0.5">Send a conflict waiver to the client for signature.</p>
             </div>
           </div>
@@ -153,7 +153,7 @@ export default function ConflictReviewScreen({
               {resolution === "reject" && <span className="h-2.5 w-2.5 rounded-full bg-emerald-600" />}
             </div>
             <div>
-              <p className="text-xs font-bold text-slate-800">Reject Client</p>
+              <p className="text-sm font-bold text-slate-800">Reject Client</p>
               <p className="text-[11px] text-slate-400 mt-0.5">Decline the Client due to unresolvable conflict of interest.</p>
             </div>
           </div>
@@ -161,7 +161,7 @@ export default function ConflictReviewScreen({
 
         {/* Admin Note */}
         <div className="flex flex-col gap-1.5">
-          <label className="text-xs font-bold text-slate-800">
+          <label className="text-sm font-bold text-slate-800">
             Admin Note <span className="text-red-500">*</span>
           </label>
           <textarea

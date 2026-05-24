@@ -37,7 +37,7 @@ export default function BillingSummary() {
         <CardTitle className="text-[15px] font-semibold text-slate-900">
           Billing Summary
         </CardTitle>
-        <div className="text-xs text-slate-500">Month</div>
+        <div className="text-sm text-slate-500">Month</div>
       </CardHeader>
 
       <CardContent className=" px-3 md:px-6 pb-6">
@@ -108,7 +108,7 @@ export default function BillingSummary() {
           ].map((item) => (
             <div key={item.label} className="flex items-center gap-2">
               <div className={`h-2.5 w-2.5 rounded-sm ${item.color}`} />
-              <span className="text-xs text-slate-600">{item.label}</span>
+              <span className="text-sm text-slate-600">{item.label}</span>
             </div>
           ))}
         </div>

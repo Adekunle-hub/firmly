@@ -41,12 +41,12 @@ const role = user?.role ?? "";
                   •
                 </span>
 
-                <span className="text-[#868C98] md:block hidden font-bold  text-xs">
+                <span className="text-[#868C98] md:block hidden font-bold  text-sm">
                   {role}
                 </span>
               </div>
             </div>
-            <p className="text-xs hidden sm:block text-[#868C98]">
+            <p className="text-sm hidden sm:block text-[#868C98]">
               {formatDateTime()}
             </p>
           </div>

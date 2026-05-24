@@ -176,11 +176,11 @@ export function AppSidebar() {
             <Zap color="#34D399" size={15} />
           </div>
           <div className="flex flex-col ">
-            <p className="text-xs font-semibold m-0 p-0">Pro Plan Active</p>
+            <p className="text-sm font-semibold m-0 p-0">Pro Plan Active</p>
             <span className="text-[10px] text-[#FFFFFF80]">Next billing Dec 12</span>
           </div>
 
-          <button className="text-xs  text-[#055939] font-semibold bg-white px-1 py-1 rounded-sm">
+          <button className="text-sm  text-[#055939] font-semibold bg-white px-1 py-1 rounded-sm">
             Upgrade
           </button>
         </footer>

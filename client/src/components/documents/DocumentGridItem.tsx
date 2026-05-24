@@ -52,7 +52,7 @@ export default function DocumentGridItem({
 
       {/* Metadata Typography Strings */}
       <div className="mt-2 w-full space-y-1">
-        <p className="text-xs font-semibold text-slate-700 truncate px-1 group-hover:text-[#1A6341] transition-colors">
+        <p className="text-sm font-semibold text-slate-700 truncate px-1 group-hover:text-[#1A6341] transition-colors">
           {name}
         </p>
         <p className="text-[10px] text-slate-400 font-medium">

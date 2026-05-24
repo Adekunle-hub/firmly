@@ -11,7 +11,7 @@ export function useAuthGuard() {
   const router = useRouter();
 
   useEffect(() => {
-    // Don't redirect mid-logout — the dropdown already called router.replace
+    
     if (!isLoading && !isAuthenticated && !isLoggingOut) {
       router.push("/login");
     }

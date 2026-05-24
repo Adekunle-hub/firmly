@@ -81,7 +81,7 @@ function OtpInput({
 function InlineError({ message }: { message: string }) {
   if (!message) return null;
   return (
-    <p className="flex items-center gap-1.5 mt-1.5 text-xs text-red-400">
+    <p className="flex items-center gap-1.5 mt-1.5 text-sm text-red-400">
       <svg
         className="w-3.5 h-3.5 shrink-0"
         viewBox="0 0 16 16"

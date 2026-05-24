@@ -154,13 +154,13 @@ export default function EventDetailModal({
               <CalendarCheck size={18} className="text-[#1A4331]" />
             </div>
             <div className="flex-1">
-              <h3 className="text-xs font-bold text-slate-500 uppercase tracking-wider">
+              <h3 className="text-sm font-bold text-slate-500 uppercase tracking-wider">
                 Date &amp; Time
               </h3>
               <p className="text-sm font-semibold text-slate-900 mt-1">
                 {formatDate(event.date)}
               </p>
-              <p className="text-xs text-slate-600 font-medium mt-0.5">
+              <p className="text-sm text-slate-600 font-medium mt-0.5">
                 {event.startTime} — {event.endTime}
               </p>
             </div>
@@ -176,7 +176,7 @@ export default function EventDetailModal({
                 <MapPin size={18} className="text-blue-600" />
               </div>
               <div className="flex-1">
-                <h3 className="text-xs font-bold text-slate-500 uppercase tracking-wider">
+                <h3 className="text-sm font-bold text-slate-500 uppercase tracking-wider">
                   Location
                 </h3>
                 <p className="text-sm font-semibold text-slate-900 mt-1">
@@ -196,7 +196,7 @@ export default function EventDetailModal({
                 <Gavel size={18} className="text-amber-600" />
               </div>
               <div className="flex-1">
-                <h3 className="text-xs font-bold text-slate-500 uppercase tracking-wider">
+                <h3 className="text-sm font-bold text-slate-500 uppercase tracking-wider">
                   Presiding Judge
                 </h3>
                 <p className="text-sm font-semibold text-slate-900 mt-1">
@@ -211,7 +211,7 @@ export default function EventDetailModal({
             <div className="p-4 rounded-xl bg-slate-50 border border-slate-100">
               <div className="flex items-center gap-2 mb-3">
                 <Users size={14} className="text-slate-500 shrink-0" aria-hidden="true" />
-                <h3 className="text-xs font-bold text-slate-500 uppercase tracking-wider">
+                <h3 className="text-sm font-bold text-slate-500 uppercase tracking-wider">
                   Attendees
                 </h3>
               </div>
@@ -219,7 +219,7 @@ export default function EventDetailModal({
                 {event.participants.map((p, i) => (
                   <li
                     key={i}
-                    className="inline-flex items-center gap-2 text-xs font-semibold text-slate-700 bg-white px-2.5 py-1.5 rounded-lg border border-slate-200"
+                    className="inline-flex items-center gap-2 text-sm font-semibold text-slate-700 bg-white px-2.5 py-1.5 rounded-lg border border-slate-200"
                   >
                     <span
                       className="w-5 h-5 rounded-full bg-[#1A4331] text-white text-[9px] font-bold flex items-center justify-center shrink-0"
@@ -239,7 +239,7 @@ export default function EventDetailModal({
             <div className="p-4 rounded-xl bg-slate-50 border border-slate-100">
               <div className="flex items-center gap-2 mb-3">
                 <FileText size={14} className="text-slate-500 shrink-0" aria-hidden="true" />
-                <h3 className="text-xs font-bold text-slate-500 uppercase tracking-wider">
+                <h3 className="text-sm font-bold text-slate-500 uppercase tracking-wider">
                   Notes
                 </h3>
               </div>
@@ -259,11 +259,11 @@ export default function EventDetailModal({
             Cancel
           </button>
           <div className="flex items-center gap-2">
-            <button className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-700 bg-white border border-slate-300 hover:border-slate-400 px-3 py-2 rounded-lg transition-colors cursor-pointer">
+            <button className="inline-flex items-center gap-1.5 text-sm font-bold text-slate-700 bg-white border border-slate-300 hover:border-slate-400 px-3 py-2 rounded-lg transition-colors cursor-pointer">
               <FileText size={13} className="shrink-0" aria-hidden="true" />
               View Case
             </button>
-            <button className="inline-flex items-center gap-1.5 text-xs font-bold text-white bg-[#1A4331] hover:bg-[#133224] px-3 py-2 rounded-lg transition-colors cursor-pointer">
+            <button className="inline-flex items-center gap-1.5 text-sm font-bold text-white bg-[#1A4331] hover:bg-[#133224] px-3 py-2 rounded-lg transition-colors cursor-pointer">
               <ExternalLink size={13} className="shrink-0" aria-hidden="true" />
               Edit Event
             </button>

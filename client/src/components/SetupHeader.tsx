@@ -32,7 +32,7 @@ export default function SetupHeader({
       </p>
 
       <div className="w-full mt-5">
-        <span className="text-xs font-bold text-white tracking-widest uppercase">
+        <span className="text-sm font-bold text-white tracking-widest uppercase">
           STEP {setupStep} OF {totalSteps}
         </span>
 

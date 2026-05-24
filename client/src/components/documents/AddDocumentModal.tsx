@@ -54,7 +54,7 @@ const handleSubmit = (e: React.FormEvent) => {
 
         <form onSubmit={handleSubmit} className=" space-y-3 md:space-y-5 mt-2">
           <div className="space-y-1.5">
-            <label className="text-xs font-bold text-slate-900 tracking-wide">
+            <label className="text-sm font-bold text-slate-900 tracking-wide">
               Document Name
             </label>
             <Input
@@ -62,7 +62,7 @@ const handleSubmit = (e: React.FormEvent) => {
               value={docName}
               onChange={(e) => setDocName(e.target.value)}
               placeholder="Enter document name"
-              className="h-11 border-slate-200 focus-visible:ring-1 focus-visible:ring-emerald-600 rounded-lg text-xs placeholder:text-slate-400 font-medium"
+              className="h-11 border-slate-200 focus-visible:ring-1 focus-visible:ring-emerald-600 rounded-lg text-sm placeholder:text-slate-400 font-medium"
             />
           </div>
 
@@ -70,7 +70,7 @@ const handleSubmit = (e: React.FormEvent) => {
             <div className="p-3 bg-slate-50 rounded-full text-slate-400 group-hover:text-emerald-700 group-hover:bg-emerald-50 transition-all mb-3">
               <Upload size={22} strokeWidth={2} />
             </div>
-            <p className="text-xs font-bold text-slate-800">
+            <p className="text-sm font-bold text-slate-800">
               Click to upload or drag and drop
             </p>
             <p className="text-[10px] text-slate-400 font-semibold mt-1">
@@ -91,10 +91,10 @@ const handleSubmit = (e: React.FormEvent) => {
               Link to Case
             </label>
             <Select value={caseLink} onValueChange={setCaseLink}>
-              <SelectTrigger className=" border-slate-200 text-xs font-semibold text-slate-700 rounded-lg focus:ring-1 focus:ring-emerald-600 w-full">
+              <SelectTrigger className=" border-slate-200 text-sm font-semibold text-slate-700 rounded-lg focus:ring-1 focus:ring-emerald-600 w-full">
                 <SelectValue placeholder="Select" />
               </SelectTrigger>
-              <SelectContent className="bg-white border border-slate-100 rounded-lg shadow-xl text-xs font-medium">
+              <SelectContent className="bg-white border border-slate-100 rounded-lg shadow-xl text-sm font-medium">
                 <SelectItem value="ld-142">
                   Case: LD/142/2025 — Adewale v. Zenith
                 </SelectItem>
@@ -114,10 +114,10 @@ const handleSubmit = (e: React.FormEvent) => {
               Document Type
             </label>
             <Select value={docType} onValueChange={setDocType}>
-              <SelectTrigger className=" border-slate-200 text-xs font-semibold text-slate-700 rounded-lg focus:ring-1 focus:ring-emerald-600 w-full! ">
+              <SelectTrigger className=" border-slate-200 text-sm font-semibold text-slate-700 rounded-lg focus:ring-1 focus:ring-emerald-600 w-full! ">
                 <SelectValue placeholder="Select Type" />
               </SelectTrigger>
-              <SelectContent className="bg-white border border-slate-100 rounded-lg shadow-xl text-xs font-medium">
+              <SelectContent className="bg-white border border-slate-100 rounded-lg shadow-xl text-sm font-medium">
                 <SelectItem value="affidavit">Affidavit</SelectItem>
                 <SelectItem value="writ">Writ & Summons</SelectItem>
                 <SelectItem value="statement">

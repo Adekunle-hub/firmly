@@ -64,7 +64,7 @@ export default function UploadDocument({ label, hint }: Props) {
               {file.name}
             </p>
 
-            <p className="text-xs text-white/50">
+            <p className="text-sm text-white/50">
               {new Date().toLocaleDateString("en-GB", {
                 day: "2-digit",
                 month: "short",
@@ -74,7 +74,7 @@ export default function UploadDocument({ label, hint }: Props) {
             </p>
           </div>
 
-          <div className="text-xs text-white/50">25%</div>
+          <div className="text-sm text-white/50">25%</div>
 
           <button
             type="button"

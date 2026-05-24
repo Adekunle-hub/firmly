@@ -94,7 +94,7 @@ export default function CaseDetailsClient({ id }: CaseDetailsClientProps) {
       <div className="flex flex-col gap-2">
         <button
           onClick={()=>router.back()}
-          className="flex items-center gap-1 cursor-pointer text-[#1A4331] hover:text-[#133224] text-xs font-semibold w-fit transition-colors"
+          className="flex items-center gap-1 cursor-pointer text-[#1A4331] hover:text-[#133224] text-sm font-semibold w-fit transition-colors"
         >
           <ChevronLeft size={14} />
           Back
@@ -113,37 +113,37 @@ export default function CaseDetailsClient({ id }: CaseDetailsClientProps) {
                 In Progress
               </span>
             </div>
-            <p className="text-xs text-slate-500 font-medium">Case ID: {id}</p>
+            <p className="text-sm text-slate-500 font-medium">Case ID: {id}</p>
           </div>
 
           {/* Action Row */}
           <div className="flex items-center gap-2 flex-wrap">
             <Select value={priority} onValueChange={setPriority}>
-              <SelectTrigger className="h-9 w-24 text-xs font-semibold bg-white border-slate-200 rounded-lg shadow-none focus:ring-1 focus:ring-[#1a7a4a]">
+              <SelectTrigger className="h-9 w-24 text-sm font-semibold bg-white border-slate-200 rounded-lg shadow-none focus:ring-1 focus:ring-[#1a7a4a]">
                 <SelectValue placeholder="Priority" />
               </SelectTrigger>
               <SelectContent className="rounded-xl">
-                <SelectItem value="High" className="text-xs">High Priority</SelectItem>
-                <SelectItem value="Medium" className="text-xs">Medium</SelectItem>
-                <SelectItem value="Low" className="text-xs">Low</SelectItem>
+                <SelectItem value="High" className="text-sm">High Priority</SelectItem>
+                <SelectItem value="Medium" className="text-sm">Medium</SelectItem>
+                <SelectItem value="Low" className="text-sm">Low</SelectItem>
               </SelectContent>
             </Select>
 
             <Select value={status} onValueChange={setStatus}>
-              <SelectTrigger className="h-9 w-28 text-xs font-semibold bg-white border-slate-200 rounded-lg shadow-none focus:ring-1 focus:ring-[#1a7a4a]">
+              <SelectTrigger className="h-9 w-28 text-sm font-semibold bg-white border-slate-200 rounded-lg shadow-none focus:ring-1 focus:ring-[#1a7a4a]">
                 <SelectValue placeholder="Status" />
               </SelectTrigger>
               <SelectContent className="rounded-xl">
-                <SelectItem value="In Progress" className="text-xs">In Progress</SelectItem>
-                <SelectItem value="Open" className="text-xs">Open</SelectItem>
-                <SelectItem value="Closed" className="text-xs">Closed</SelectItem>
+                <SelectItem value="In Progress" className="text-sm">In Progress</SelectItem>
+                <SelectItem value="Open" className="text-sm">Open</SelectItem>
+                <SelectItem value="Closed" className="text-sm">Closed</SelectItem>
               </SelectContent>
             </Select>
 
             <Button
               variant="outline"
               size="sm"
-              className="h-9 text-xs gap-1.5 border-slate-200 text-slate-650 rounded-lg shadow-none hover:bg-slate-50"
+              className="h-9 text-sm gap-1.5 border-slate-200 text-slate-650 rounded-lg shadow-none hover:bg-slate-50"
             >
               <Pencil size={13} />
               Edit Case
@@ -152,7 +152,7 @@ export default function CaseDetailsClient({ id }: CaseDetailsClientProps) {
             <Button
               variant="outline"
               size="sm"
-              className="h-9 text-xs gap-1.5 border-slate-200 text-slate-650 rounded-lg shadow-none hover:bg-slate-50"
+              className="h-9 text-sm gap-1.5 border-slate-200 text-slate-650 rounded-lg shadow-none hover:bg-slate-50"
             >
               <Share2 size={13} />
               Export
@@ -171,7 +171,7 @@ export default function CaseDetailsClient({ id }: CaseDetailsClientProps) {
             <Card className="rounded-xl border border-slate-200 bg-white shadow-none p-4.5 space-y-4">
               <div className="flex items-center gap-2 text-slate-400 border-b border-slate-50 pb-2">
                 <User size={15} />
-                <span className="text-xs font-bold uppercase tracking-wider text-slate-500">
+                <span className="text-sm font-bold uppercase tracking-wider text-slate-500">
                   Client Information
                 </span>
               </div>
@@ -207,11 +207,11 @@ export default function CaseDetailsClient({ id }: CaseDetailsClientProps) {
             <Card className="rounded-xl border border-slate-200 bg-white shadow-none p-4.5 space-y-4">
               <div className="flex items-center gap-2 text-slate-400 border-b border-slate-50 pb-2">
                 <Calendar size={15} />
-                <span className="text-xs font-bold uppercase tracking-wider text-slate-500">
+                <span className="text-sm font-bold uppercase tracking-wider text-slate-500">
                   Timeline & Dates
                 </span>
               </div>
-              <div className="grid grid-cols-2 gap-y-3 gap-x-4 text-xs">
+              <div className="grid grid-cols-2 gap-y-3 gap-x-4 text-sm">
                 <div>
                   <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">
                     Category
@@ -253,7 +253,7 @@ export default function CaseDetailsClient({ id }: CaseDetailsClientProps) {
             <div className="space-y-2">
               <div className="flex items-center gap-2 text-slate-400">
                 <FileText size={15} />
-                <span className="text-xs font-bold uppercase tracking-wider text-slate-500">
+                <span className="text-sm font-bold uppercase tracking-wider text-slate-500">
                   Case Details
                 </span>
               </div>
@@ -262,7 +262,7 @@ export default function CaseDetailsClient({ id }: CaseDetailsClientProps) {
               </p>
             </div>
 
-            <div className="border-t border-slate-100 pt-5 grid grid-cols-1 md:grid-cols-2 gap-y-5 gap-x-8 text-xs">
+            <div className="border-t border-slate-100 pt-5 grid grid-cols-1 md:grid-cols-2 gap-y-5 gap-x-8 text-sm">
               {/* Court info */}
               <div className="space-y-3">
                 <h4 className="font-bold text-slate-400 uppercase text-[10px] tracking-wider">
@@ -316,10 +316,10 @@ export default function CaseDetailsClient({ id }: CaseDetailsClientProps) {
         <div className="space-y-6">
           {/* Activity Timeline */}
           <Card className="rounded-xl border border-slate-200 bg-white shadow-none p-4.5 space-y-4">
-            <h3 className="text-xs font-bold tracking-wider text-slate-500 uppercase border-b border-slate-50 pb-2">
+            <h3 className="text-sm font-bold tracking-wider text-slate-500 uppercase border-b border-slate-50 pb-2">
               Activity Timeline
             </h3>
-            <div className="relative pl-4 space-y-5 border-l border-slate-100 text-xs">
+            <div className="relative pl-4 space-y-5 border-l border-slate-100 text-sm">
               {/* Timeline Item 1 */}
               <div className="relative pl-1">
                 <div className="absolute -left-[21px] top-1.5 w-2 h-2 rounded-full bg-emerald-600 ring-4 ring-emerald-50" />
@@ -363,7 +363,7 @@ export default function CaseDetailsClient({ id }: CaseDetailsClientProps) {
             </div>
             <Button
               variant="outline"
-              className="w-full text-xs h-9 border-slate-200 hover:bg-slate-50 shadow-none rounded-lg text-slate-650"
+              className="w-full text-sm h-9 border-slate-200 hover:bg-slate-50 shadow-none rounded-lg text-slate-650"
             >
               Load Older Activity
             </Button>
@@ -371,31 +371,31 @@ export default function CaseDetailsClient({ id }: CaseDetailsClientProps) {
 
           {/* Quick Actions */}
           <Card className="rounded-xl border border-slate-200 bg-white shadow-none p-4.5 space-y-3.5">
-            <h3 className="text-xs font-bold tracking-wider text-slate-500 uppercase border-b border-slate-50 pb-2">
+            <h3 className="text-sm font-bold tracking-wider text-slate-500 uppercase border-b border-slate-50 pb-2">
               Quick Actions
             </h3>
             <div className="flex flex-col gap-2">
               <Button
                 variant="outline"
-                className="justify-start gap-2 h-9 text-xs border-slate-200 hover:bg-slate-50 shadow-none text-slate-650 cursor-pointer"
+                className="justify-start gap-2 h-9 text-sm border-slate-200 hover:bg-slate-50 shadow-none text-slate-650 cursor-pointer"
               >
                 <Pencil size={13} /> Update Case
               </Button>
               <Button
                 variant="outline"
-                className="justify-start gap-2 h-9 text-xs border-slate-200 hover:bg-slate-50 shadow-none text-slate-650 cursor-pointer"
+                className="justify-start gap-2 h-9 text-sm border-slate-200 hover:bg-slate-50 shadow-none text-slate-650 cursor-pointer"
               >
                 <Calendar size={13} /> Schedule Hearing
               </Button>
               <Button
                 variant="outline"
-                className="justify-start gap-2 h-9 text-xs border-slate-200 hover:bg-slate-50 shadow-none text-slate-650 cursor-pointer"
+                className="justify-start gap-2 h-9 text-sm border-slate-200 hover:bg-slate-50 shadow-none text-slate-650 cursor-pointer"
               >
                 <Plus size={13} /> Add Document
               </Button>
               <Button
                 variant="outline"
-                className="justify-start gap-2 h-9 text-xs border-red-200 text-red-600 hover:bg-red-50 shadow-none bg-white cursor-pointer"
+                className="justify-start gap-2 h-9 text-sm border-red-200 text-red-600 hover:bg-red-50 shadow-none bg-white cursor-pointer"
               >
                 <Trash2 size={13} /> Delete Case
               </Button>
@@ -421,7 +421,7 @@ export default function CaseDetailsClient({ id }: CaseDetailsClientProps) {
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id as TabType)}
                 className={cn(
-                  "text-xs font-semibold px-4 py-2 border-b-2 transition-all cursor-pointer whitespace-nowrap",
+                  "text-sm font-semibold px-4 py-2 border-b-2 transition-all cursor-pointer whitespace-nowrap",
                   isSelected
                     ? "border-[#1A4331] text-[#1A4331]"
                     : "border-transparent text-slate-500 hover:text-slate-800"
@@ -491,11 +491,11 @@ export default function CaseDetailsClient({ id }: CaseDetailsClientProps) {
                         className="w-full flex items-center justify-between p-3.5 text-left bg-slate-50/50 hover:bg-slate-50 transition-colors"
                       >
                         <div className="flex items-center gap-3">
-                          <div className="h-7 w-7 rounded-full bg-emerald-50 flex items-center justify-center font-bold text-xs text-[#1A4331]">
+                          <div className="h-7 w-7 rounded-full bg-emerald-50 flex items-center justify-center font-bold text-sm text-[#1A4331]">
                             {witness.name.charAt(0)}
                           </div>
                           <div>
-                            <p className="text-xs font-bold text-slate-800">
+                            <p className="text-sm font-bold text-slate-800">
                               {witness.name}
                             </p>
                             <span className="text-[10px] text-slate-400 font-semibold block mt-0.5">
@@ -511,7 +511,7 @@ export default function CaseDetailsClient({ id }: CaseDetailsClientProps) {
                       </button>
 
                       {isExpanded && (
-                        <div className="p-4 border-t border-slate-100 text-xs space-y-4 bg-white">
+                        <div className="p-4 border-t border-slate-100 text-sm space-y-4 bg-white">
                           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                             <div>
                               <span className="text-[9px] font-bold text-slate-400 uppercase tracking-wider">
@@ -571,7 +571,7 @@ export default function CaseDetailsClient({ id }: CaseDetailsClientProps) {
                 <div className="border border-slate-100 rounded-xl p-4 bg-white flex flex-col md:flex-row md:items-center justify-between gap-4">
                   <div className="space-y-2">
                     <div className="flex items-center gap-2">
-                      <h4 className="text-xs font-bold text-slate-800">Trial Hearing</h4>
+                      <h4 className="text-sm font-bold text-slate-800">Trial Hearing</h4>
                       <span className="text-[8px] bg-blue-50 text-blue-700 border border-blue-100 rounded-sm font-bold px-1.5 py-0.5 uppercase tracking-wider">
                         Scheduled
                       </span>
@@ -580,7 +580,7 @@ export default function CaseDetailsClient({ id }: CaseDetailsClientProps) {
                       <p><span className="font-semibold text-slate-700">Date/Time:</span> 22/05/2025 @ 10:00 AM</p>
                       <p><span className="font-semibold text-slate-700">Location:</span> Lagos State High Court - Court 3</p>
                     </div>
-                    <p className="text-xs text-slate-600 leading-snug pt-1">
+                    <p className="text-sm text-slate-600 leading-snug pt-1">
                       <span className="font-bold text-slate-700">Notes:</span> Witness Testimony - Prosecution witness expected
                     </p>
                   </div>
@@ -593,7 +593,7 @@ export default function CaseDetailsClient({ id }: CaseDetailsClientProps) {
                 <div className="border border-slate-100 rounded-xl p-4 bg-white flex flex-col md:flex-row md:items-center justify-between gap-4">
                   <div className="space-y-2">
                     <div className="flex items-center gap-2">
-                      <h4 className="text-xs font-bold text-slate-800">Pre-trial Conference</h4>
+                      <h4 className="text-sm font-bold text-slate-800">Pre-trial Conference</h4>
                       <span className="text-[8px] bg-slate-50 text-slate-600 border border-slate-100 rounded-sm font-bold px-1.5 py-0.5 uppercase tracking-wider">
                         Completed
                       </span>
@@ -602,7 +602,7 @@ export default function CaseDetailsClient({ id }: CaseDetailsClientProps) {
                       <p><span className="font-semibold text-slate-700">Date/Time:</span> 15/04/2025 @ 2:30 PM</p>
                       <p><span className="font-semibold text-slate-700">Location:</span> Lagos State High Court - Court 2</p>
                     </div>
-                    <p className="text-xs text-slate-600 leading-snug pt-1">
+                    <p className="text-sm text-slate-600 leading-snug pt-1">
                       <span className="font-bold text-slate-700">Notes:</span> Directions given for filing of written documents
                     </p>
                   </div>
@@ -633,7 +633,7 @@ export default function CaseDetailsClient({ id }: CaseDetailsClientProps) {
                     { name: "Email_Communications.pdf", size: "1.8 MB" },
                     { name: "Witness_Statements.docx", size: "1.2 MB" },
                   ].map((doc) => (
-                    <div key={doc.name} className="border border-slate-100 p-2.5 rounded-lg flex items-center justify-between text-xs hover:bg-slate-50 transition-colors">
+                    <div key={doc.name} className="border border-slate-100 p-2.5 rounded-lg flex items-center justify-between text-sm hover:bg-slate-50 transition-colors">
                       <div className="flex items-center gap-2.5 min-w-0">
                         <FileText size={16} className="text-red-500 shrink-0" />
                         <div className="min-w-0">
@@ -657,7 +657,7 @@ export default function CaseDetailsClient({ id }: CaseDetailsClientProps) {
                     { name: "Initial_Complaint.pdf", size: "3.1 MB" },
                     { name: "Discovery_Documents.zip", size: "12.4 MB" },
                   ].map((doc) => (
-                    <div key={doc.name} className="border border-slate-100 p-2.5 rounded-lg flex items-center justify-between text-xs hover:bg-slate-50 transition-colors">
+                    <div key={doc.name} className="border border-slate-100 p-2.5 rounded-lg flex items-center justify-between text-sm hover:bg-slate-50 transition-colors">
                       <div className="flex items-center gap-2.5 min-w-0">
                         <FileText size={16} className="text-[#1A4331] shrink-0" />
                         <div className="min-w-0">
@@ -686,7 +686,7 @@ export default function CaseDetailsClient({ id }: CaseDetailsClientProps) {
               </div>
 
               {/* Mini Billing Stats */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 bg-slate-50/50 border border-slate-100 p-3 rounded-xl text-xs">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 bg-slate-50/50 border border-slate-100 p-3 rounded-xl text-sm">
                 <div>
                   <span className="text-[9px] font-bold text-slate-400 uppercase tracking-wider block">Total Invoiced</span>
                   <p className="text-sm font-bold text-slate-800 mt-0.5">₦1,900,000</p>
@@ -702,7 +702,7 @@ export default function CaseDetailsClient({ id }: CaseDetailsClientProps) {
               </div>
 
               {/* Invoices List */}
-              <div className="space-y-3 text-xs">
+              <div className="space-y-3 text-sm">
                 {/* Inv 1 */}
                 <div className="border border-slate-100 rounded-lg p-3 space-y-2 hover:bg-slate-50/40 transition-colors">
                   <div className="flex items-center justify-between">
@@ -771,7 +771,7 @@ export default function CaseDetailsClient({ id }: CaseDetailsClientProps) {
                 </Button>
               </div>
 
-              <div className="space-y-3.5 pt-1 text-xs">
+              <div className="space-y-3.5 pt-1 text-sm">
                 {notes.map((note, idx) => (
                   <div key={idx} className="border border-slate-100 rounded-xl p-4 bg-white space-y-2.5 relative group">
                     <div className="flex justify-between items-start">
@@ -800,12 +800,12 @@ export default function CaseDetailsClient({ id }: CaseDetailsClientProps) {
           <Card className="max-w-md w-full rounded-xl border border-slate-200 shadow-2xl p-6 bg-white space-y-4 mx-4 animate-in fade-in zoom-in-95 duration-150">
             <div className="space-y-1">
               <h3 className="text-lg font-bold text-slate-900 leading-none">Add Note</h3>
-              <p className="text-xs text-slate-400 font-medium">
+              <p className="text-sm text-slate-400 font-medium">
                 Kindly fill out all fields provided below
               </p>
             </div>
 
-            <form onSubmit={handleAddNote} className="space-y-4 text-xs font-semibold text-slate-700">
+            <form onSubmit={handleAddNote} className="space-y-4 text-sm font-semibold text-slate-700">
               <div className="space-y-1.5">
                 <label className="text-[11px] uppercase tracking-wider font-bold text-slate-500">Recipient Email</label>
                 <input
@@ -814,7 +814,7 @@ export default function CaseDetailsClient({ id }: CaseDetailsClientProps) {
                   placeholder="Email"
                   value={recipientEmail}
                   onChange={(e) => setRecipientEmail(e.target.value)}
-                  className="w-full h-10 px-3 border border-slate-200 rounded-lg text-slate-800 bg-white font-medium focus:outline-none focus:ring-1 focus:ring-[#1a7a4a] text-xs shadow-none"
+                  className="w-full h-10 px-3 border border-slate-200 rounded-lg text-slate-800 bg-white font-medium focus:outline-none focus:ring-1 focus:ring-[#1a7a4a] text-sm shadow-none"
                 />
               </div>
 
@@ -826,7 +826,7 @@ export default function CaseDetailsClient({ id }: CaseDetailsClientProps) {
                   placeholder="Enter Note"
                   value={noteContent}
                   onChange={(e) => setNoteContent(e.target.value)}
-                  className="w-full p-3 border border-slate-200 rounded-lg text-slate-800 bg-white font-medium focus:outline-none focus:ring-1 focus:ring-[#1a7a4a] text-xs resize-none shadow-none"
+                  className="w-full p-3 border border-slate-200 rounded-lg text-slate-800 bg-white font-medium focus:outline-none focus:ring-1 focus:ring-[#1a7a4a] text-sm resize-none shadow-none"
                 />
               </div>
 
@@ -835,13 +835,13 @@ export default function CaseDetailsClient({ id }: CaseDetailsClientProps) {
                   type="button"
                   variant="outline"
                   onClick={() => setIsNoteModalOpen(false)}
-                  className="h-10 px-4 text-xs border-slate-200 hover:bg-slate-50 text-slate-650 rounded-lg shadow-none cursor-pointer"
+                  className="h-10 px-4 text-sm border-slate-200 hover:bg-slate-50 text-slate-650 rounded-lg shadow-none cursor-pointer"
                 >
                   Cancel
                 </Button>
                 <Button
                   type="submit"
-                  className="h-10 px-4 text-xs bg-[#1A4331] hover:bg-[#133224] text-white rounded-lg shadow-sm cursor-pointer"
+                  className="h-10 px-4 text-sm bg-[#1A4331] hover:bg-[#133224] text-white rounded-lg shadow-sm cursor-pointer"
                 >
                   Save
                 </Button>

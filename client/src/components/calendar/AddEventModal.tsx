@@ -106,7 +106,7 @@ export default function AddEventModal({ isOpen, defaultDate, onClose, onAdd }: A
               </div>
             </div>
             <h2 className="text-lg font-bold text-white">Create Event</h2>
-            <p className="text-xs text-emerald-100/70 font-medium mt-0.5">Add a hearing, deadline, or meeting</p>
+            <p className="text-sm text-emerald-100/70 font-medium mt-0.5">Add a hearing, deadline, or meeting</p>
           </div>
           <button
             onClick={onClose}
@@ -121,7 +121,7 @@ export default function AddEventModal({ isOpen, defaultDate, onClose, onAdd }: A
         <form onSubmit={(e) => { e.preventDefault(); handleSubmit(); }} className="px-6 py-5 space-y-4 max-h-[70vh] overflow-y-auto">
           {/* Event Title */}
           <fieldset>
-            <label htmlFor="event-title" className="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-2">
+            <label htmlFor="event-title" className="block text-sm font-bold text-slate-600 uppercase tracking-wider mb-2">
               Event Title <span className="text-red-500">*</span>
             </label>
             <input
@@ -135,12 +135,12 @@ export default function AddEventModal({ isOpen, defaultDate, onClose, onAdd }: A
                 errors.title ? "border-red-300 bg-red-50" : "border-slate-300 bg-slate-50"
               )}
             />
-            {errors.title && <p className="text-xs text-red-600 mt-1 font-medium">{errors.title}</p>}
+            {errors.title && <p className="text-sm text-red-600 mt-1 font-medium">{errors.title}</p>}
           </fieldset>
 
           {/* Event Type */}
           <fieldset>
-            <legend className="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-2">
+            <legend className="block text-sm font-bold text-slate-600 uppercase tracking-wider mb-2">
               Event Type <span className="text-red-500">*</span>
             </legend>
             <div className="flex flex-wrap gap-2">
@@ -150,7 +150,7 @@ export default function AddEventModal({ isOpen, defaultDate, onClose, onAdd }: A
                   type="button"
                   onClick={() => set("type", et.value)}
                   className={cn(
-                    "flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-xs font-bold transition-all cursor-pointer",
+                    "flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-sm font-bold transition-all cursor-pointer",
                     form.type === et.value
                       ? "border-[#1A4331] bg-emerald-50 text-[#1A4331]"
                       : "border-slate-300 bg-white text-slate-600 hover:border-slate-400"
@@ -165,7 +165,7 @@ export default function AddEventModal({ isOpen, defaultDate, onClose, onAdd }: A
 
           {/* Date + Times */}
           <fieldset className="space-y-2">
-            <legend className="text-xs font-bold text-slate-600 uppercase tracking-wider">Date &amp; Time</legend>
+            <legend className="text-sm font-bold text-slate-600 uppercase tracking-wider">Date &amp; Time</legend>
             <div className="grid grid-cols-3 gap-2">
               <div>
                 <label htmlFor="event-date" className="sr-only">Date</label>
@@ -175,7 +175,7 @@ export default function AddEventModal({ isOpen, defaultDate, onClose, onAdd }: A
                   value={form.date}
                   onChange={(e) => set("date", e.target.value)}
                   className={cn(
-                    "w-full h-10 px-2 rounded-lg border text-xs font-medium text-slate-900",
+                    "w-full h-10 px-2 rounded-lg border text-sm font-medium text-slate-900",
                     "focus:outline-none focus:ring-2 focus:ring-[#1A4331]/20 focus:border-[#1A4331]",
                     errors.date ? "border-red-300 bg-red-50" : "border-slate-300 bg-slate-50"
                   )}
@@ -188,7 +188,7 @@ export default function AddEventModal({ isOpen, defaultDate, onClose, onAdd }: A
                   type="time"
                   value={form.startTime}
                   onChange={(e) => set("startTime", e.target.value)}
-                  className="w-full h-10 px-2 rounded-lg border border-slate-300 bg-slate-50 text-xs font-medium text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#1A4331]/20 focus:border-[#1A4331]"
+                  className="w-full h-10 px-2 rounded-lg border border-slate-300 bg-slate-50 text-sm font-medium text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#1A4331]/20 focus:border-[#1A4331]"
                 />
               </div>
               <div>
@@ -198,7 +198,7 @@ export default function AddEventModal({ isOpen, defaultDate, onClose, onAdd }: A
                   type="time"
                   value={form.endTime}
                   onChange={(e) => set("endTime", e.target.value)}
-                  className="w-full h-10 px-2 rounded-lg border border-slate-300 bg-slate-50 text-xs font-medium text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#1A4331]/20 focus:border-[#1A4331]"
+                  className="w-full h-10 px-2 rounded-lg border border-slate-300 bg-slate-50 text-sm font-medium text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#1A4331]/20 focus:border-[#1A4331]"
                 />
               </div>
             </div>
@@ -206,7 +206,7 @@ export default function AddEventModal({ isOpen, defaultDate, onClose, onAdd }: A
 
           {/* Location */}
           <fieldset>
-            <label htmlFor="event-location" className="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-2">
+            <label htmlFor="event-location" className="block text-sm font-bold text-slate-600 uppercase tracking-wider mb-2">
               Location
             </label>
             <input
@@ -220,7 +220,7 @@ export default function AddEventModal({ isOpen, defaultDate, onClose, onAdd }: A
 
           {/* Case Title */}
           <fieldset>
-            <label htmlFor="event-case" className="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-2">
+            <label htmlFor="event-case" className="block text-sm font-bold text-slate-600 uppercase tracking-wider mb-2">
               Related Case
             </label>
             <input
@@ -234,7 +234,7 @@ export default function AddEventModal({ isOpen, defaultDate, onClose, onAdd }: A
 
           {/* Judge */}
           <fieldset>
-            <label htmlFor="event-judge" className="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-2">
+            <label htmlFor="event-judge" className="block text-sm font-bold text-slate-600 uppercase tracking-wider mb-2">
               Presiding Judge
             </label>
             <input
@@ -248,7 +248,7 @@ export default function AddEventModal({ isOpen, defaultDate, onClose, onAdd }: A
 
           {/* Participants */}
           <fieldset>
-            <label htmlFor="event-participants" className="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-2">
+            <label htmlFor="event-participants" className="block text-sm font-bold text-slate-600 uppercase tracking-wider mb-2">
               Attendees <span className="font-normal text-slate-500 normal-case">(comma-separated)</span>
             </label>
             <input
@@ -262,7 +262,7 @@ export default function AddEventModal({ isOpen, defaultDate, onClose, onAdd }: A
 
           {/* Description / Notes */}
           <fieldset>
-            <label htmlFor="event-notes" className="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-2">
+            <label htmlFor="event-notes" className="block text-sm font-bold text-slate-600 uppercase tracking-wider mb-2">
               Notes
             </label>
             <textarea

@@ -39,7 +39,7 @@ export default function TemplateCategory({ title, items }: TemplateCategoryProps
               </div>
             </div>
 
-            <Button variant="ghost" className="text-xs cursor-pointer font-bold text-[#1A6341] hover:bg-emerald-50 h-8 px-1 md:px-4 rounded-lg">
+            <Button variant="ghost" className="text-sm cursor-pointer font-bold text-[#1A6341] hover:bg-emerald-50 h-8 px-1 md:px-4 rounded-lg">
               View Files
             </Button>
           </div>

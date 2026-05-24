@@ -47,17 +47,17 @@ export default function NewTemplateModal({ isOpen, onClose }: NewTemplateModalPr
               value={templateName}
               onChange={(e) => setTemplateName(e.target.value)}
               placeholder="Enter name"
-              className="h-11 border-slate-200 focus:ring-emerald-600 rounded-lg text-xs"
+              className="h-11 border-slate-200 focus:ring-emerald-600 rounded-lg text-sm"
             />
           </div>
 
           <div className="space-y-1.5">
             <label className="text-[11px] font-bold text-slate-900 tracking-wide uppercase">Link to Case</label>
             <Select value={caseLink} onValueChange={setCaseLink}>
-              <SelectTrigger className="h-11 border-slate-200 text-xs font-semibold text-slate-700 rounded-lg">
+              <SelectTrigger className="h-11 border-slate-200 text-sm font-semibold text-slate-700 rounded-lg">
                 <SelectValue placeholder="Select" />
               </SelectTrigger>
-              <SelectContent className="bg-white text-xs font-medium">
+              <SelectContent className="bg-white text-sm font-medium">
                 <SelectItem value="case-1">Case: LD/142/2025</SelectItem>
                 <SelectItem value="case-2">Case: LD/078/2025</SelectItem>
               </SelectContent>
@@ -67,17 +67,17 @@ export default function NewTemplateModal({ isOpen, onClose }: NewTemplateModalPr
           <div className="space-y-1.5">
             <label className="text-[11px] font-bold text-slate-900 tracking-wide uppercase">Sign with DocuSign</label>
             <Select defaultValue="no">
-              <SelectTrigger className="h-11 border-slate-200 text-xs font-semibold text-slate-700 rounded-lg">
+              <SelectTrigger className="h-11 border-slate-200 text-sm font-semibold text-slate-700 rounded-lg">
                 <SelectValue />
               </SelectTrigger>
-              <SelectContent className="bg-white text-xs font-medium">
+              <SelectContent className="bg-white text-sm font-medium">
                 <SelectItem value="yes">Yes, enable DocuSign</SelectItem>
                 <SelectItem value="no">No</SelectItem>
               </SelectContent>
             </Select>
           </div>
 
-          <Button type="submit" className="w-full h-11 bg-[#1A6341] hover:bg-[#134D32] text-white font-bold text-xs rounded-xl mt-2">
+          <Button type="submit" className="w-full h-11 bg-[#1A6341] hover:bg-[#134D32] text-white font-bold text-sm rounded-xl mt-2">
             Create
           </Button>
         </form>

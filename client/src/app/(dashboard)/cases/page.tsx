@@ -24,7 +24,7 @@ export default function CasesPage() {
             Oversee and manage active legal portfolios across the firm.
           </p>
         </div>
-        <Button asChild className="bg-[#1A4331] text-white hover:bg-[#133224]! h-10 px-4 text-xs font-semibold rounded-lg shrink-0 cursor-pointer shadow-sm">
+        <Button asChild className="bg-[#1A4331] text-white hover:bg-[#133224]! h-10 px-4 text-sm font-semibold rounded-lg shrink-0 cursor-pointer shadow-sm">
           <Link href="/cases/new">+ Add New Case</Link>
         </Button>
       </div>

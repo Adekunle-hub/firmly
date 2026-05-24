@@ -55,20 +55,20 @@ export default function ShareDocumentModal({ isOpen, onClose, documentName }: Sh
 
             {/* Document Indicator Row */}
             <div className="flex items-center gap-3 p-3 bg-slate-50 rounded-xl mb-5">
-              <div className="bg-red-50 text-red-600 p-2 rounded-lg font-bold text-xs tracking-tight">
+              <div className="bg-red-50 text-red-600 p-2 rounded-lg font-bold text-sm tracking-tight">
                 PDF
               </div>
-              <span className="text-xs font-bold text-slate-700 truncate">Case File</span>
+              <span className="text-sm font-bold text-slate-700 truncate">Case File</span>
             </div>
 
             {/* Selection Dropdown Input */}
             <div className="space-y-4">
               <div className="space-y-1">
                 <Select value={selectedPerson} onValueChange={setSelectedPerson}>
-                  <SelectTrigger className="h-11 border-slate-200 text-xs font-semibold text-slate-700 rounded-xl focus:ring-1 focus:ring-emerald-600">
+                  <SelectTrigger className="h-11 border-slate-200 text-sm font-semibold text-slate-700 rounded-xl focus:ring-1 focus:ring-emerald-600">
                     <SelectValue placeholder="Select people" />
                   </SelectTrigger>
-                  <SelectContent className="bg-white border border-slate-100 rounded-xl shadow-xl text-xs font-semibold">
+                  <SelectContent className="bg-white border border-slate-100 rounded-xl shadow-xl text-sm font-semibold">
                     <SelectItem value="Barrister Alex">Barrister Alex</SelectItem>
                     <SelectItem value="Oluwaseun FBN">Oluwaseun FBN</SelectItem>
                     <SelectItem value="Dapo Admin">Dapo Admin</SelectItem>
@@ -79,7 +79,7 @@ export default function ShareDocumentModal({ isOpen, onClose, documentName }: Sh
               <Button
                 onClick={handleShare}
                 disabled={!selectedPerson}
-                className="w-full h-11 bg-[#1A6341] hover:bg-[#134D32] disabled:bg-slate-100 disabled:text-slate-400 text-white font-bold text-xs rounded-xl transition-colors shadow-xs"
+                className="w-full h-11 bg-[#1A6341] hover:bg-[#134D32] disabled:bg-slate-100 disabled:text-slate-400 text-white font-bold text-sm rounded-xl transition-colors shadow-xs"
               >
                 Share
               </Button>

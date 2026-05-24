@@ -87,7 +87,7 @@ export default function CalendarBookingForm({
         </div>
 
         {/* Client Summary card */}
-        <div className="bg-slate-50/70 border border-slate-100 p-3.5 rounded-xl space-y-1.5 text-xs">
+        <div className="bg-slate-50/70 border border-slate-100 p-3.5 rounded-xl space-y-1.5 text-sm">
           <p className="font-bold text-slate-700">
             {calendarClient} &bull; <span className="text-slate-400 font-semibold">jane.doe@gmail.com</span>
           </p>
@@ -107,24 +107,24 @@ export default function CalendarBookingForm({
                 <Input
                   value={calendarStartDate}
                   onChange={(e) => setCalendarStartDate(e.target.value)}
-                  className="h-9 text-xs border-slate-200 rounded-lg shadow-none focus-visible:ring-1 focus-visible:ring-[#1a7a4a] text-slate-700"
+                  className="h-9 text-sm border-slate-200 rounded-lg shadow-none focus-visible:ring-1 focus-visible:ring-[#1a7a4a] text-slate-700"
                 />
               </div>
               <div className="col-span-3">
                 <Input
                   value={calendarStartTime}
                   onChange={(e) => setCalendarStartTime(e.target.value)}
-                  className="h-9 text-xs border-slate-200 rounded-lg shadow-none focus-visible:ring-1 focus-visible:ring-[#1a7a4a] text-slate-700 text-center"
+                  className="h-9 text-sm border-slate-200 rounded-lg shadow-none focus-visible:ring-1 focus-visible:ring-[#1a7a4a] text-slate-700 text-center"
                 />
               </div>
               <div className="col-span-3">
                 <Select value={calendarStartPeriod} onValueChange={setCalendarStartPeriod}>
-                  <SelectTrigger className="h-9 text-xs border-slate-200 rounded-lg shadow-none focus:ring-1 focus:ring-[#1a7a4a]">
+                  <SelectTrigger className="h-9 text-sm border-slate-200 rounded-lg shadow-none focus:ring-1 focus:ring-[#1a7a4a]">
                     <SelectValue />
                   </SelectTrigger>
                   <SelectContent className="rounded-xl">
-                    <SelectItem value="AM" className="text-xs">AM</SelectItem>
-                    <SelectItem value="PM" className="text-xs">PM</SelectItem>
+                    <SelectItem value="AM" className="text-sm">AM</SelectItem>
+                    <SelectItem value="PM" className="text-sm">PM</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
@@ -138,24 +138,24 @@ export default function CalendarBookingForm({
                 <Input
                   value={calendarEndDate}
                   onChange={(e) => setCalendarEndDate(e.target.value)}
-                  className="h-9 text-xs border-slate-200 rounded-lg shadow-none focus-visible:ring-1 focus-visible:ring-[#1a7a4a] text-slate-700"
+                  className="h-9 text-sm border-slate-200 rounded-lg shadow-none focus-visible:ring-1 focus-visible:ring-[#1a7a4a] text-slate-700"
                 />
               </div>
               <div className="col-span-3">
                 <Input
                   value={calendarEndTime}
                   onChange={(e) => setCalendarEndTime(e.target.value)}
-                  className="h-9 text-xs border-slate-200 rounded-lg shadow-none focus-visible:ring-1 focus-visible:ring-[#1a7a4a] text-slate-700 text-center"
+                  className="h-9 text-sm border-slate-200 rounded-lg shadow-none focus-visible:ring-1 focus-visible:ring-[#1a7a4a] text-slate-700 text-center"
                 />
               </div>
               <div className="col-span-3">
                 <Select value={calendarEndPeriod} onValueChange={setCalendarEndPeriod}>
-                  <SelectTrigger className="h-9 text-xs border-slate-200 rounded-lg shadow-none focus:ring-1 focus:ring-[#1a7a4a]">
+                  <SelectTrigger className="h-9 text-sm border-slate-200 rounded-lg shadow-none focus:ring-1 focus:ring-[#1a7a4a]">
                     <SelectValue />
                   </SelectTrigger>
                   <SelectContent className="rounded-xl">
-                    <SelectItem value="AM" className="text-xs">AM</SelectItem>
-                    <SelectItem value="PM" className="text-xs">PM</SelectItem>
+                    <SelectItem value="AM" className="text-sm">AM</SelectItem>
+                    <SelectItem value="PM" className="text-sm">PM</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
@@ -165,13 +165,13 @@ export default function CalendarBookingForm({
           <div>
             <FieldLabel>Legal Matter</FieldLabel>
             <Select value={calendarLegalMatter} onValueChange={setCalendarLegalMatter}>
-              <SelectTrigger className="w-full h-9 text-xs border-slate-200 rounded-lg shadow-none focus:ring-1 focus:ring-[#1a7a4a]">
+              <SelectTrigger className="w-full h-9 text-sm border-slate-200 rounded-lg shadow-none focus:ring-1 focus:ring-[#1a7a4a]">
                 <SelectValue placeholder="Select" />
               </SelectTrigger>
               <SelectContent className="rounded-xl">
-                <SelectItem value="consultation" className="text-xs">Initial Consultation</SelectItem>
-                <SelectItem value="hearing" className="text-xs">Court Hearing</SelectItem>
-                <SelectItem value="mediation" className="text-xs">Mediation</SelectItem>
+                <SelectItem value="consultation" className="text-sm">Initial Consultation</SelectItem>
+                <SelectItem value="hearing" className="text-sm">Court Hearing</SelectItem>
+                <SelectItem value="mediation" className="text-sm">Mediation</SelectItem>
               </SelectContent>
             </Select>
           </div>
@@ -183,14 +183,14 @@ export default function CalendarBookingForm({
               onChange={(e) => setCalendarNotes(e.target.value)}
               rows={2}
               placeholder="Enter details..."
-              className="w-full p-2.5 text-xs border border-slate-200 rounded-lg bg-white focus:outline-none focus:ring-1 focus:ring-[#1a7a4a] resize-none shadow-none text-slate-800"
+              className="w-full p-2.5 text-sm border border-slate-200 rounded-lg bg-white focus:outline-none focus:ring-1 focus:ring-[#1a7a4a] resize-none shadow-none text-slate-800"
             />
           </div>
         </div>
 
         <Button
           onClick={onBook}
-          className="w-full bg-[#1A4331] hover:bg-[#133224] text-white h-11 text-xs font-semibold rounded-lg cursor-pointer shadow-sm border border-[#1A4331]"
+          className="w-full bg-[#1A4331] hover:bg-[#133224] text-white h-11 text-sm font-semibold rounded-lg cursor-pointer shadow-sm border border-[#1A4331]"
         >
           Book Calendar
         </Button>

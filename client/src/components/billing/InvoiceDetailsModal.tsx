@@ -90,7 +90,7 @@ export default function InvoiceDetailsModal({
         {/* Top Control Bar */}
         <div className="bg-white border-b border-slate-200 px-6 py-3.5 flex items-center justify-between shrink-0">
           <div className="flex items-center gap-2">
-            <span className="text-xs font-bold text-slate-800 uppercase tracking-wider">
+            <span className="text-sm font-bold text-slate-800 uppercase tracking-wider">
               Invoice Inspector
             </span>
             <span className={cn(
@@ -106,7 +106,7 @@ export default function InvoiceDetailsModal({
               variant="outline"
               size="sm"
               onClick={() => window.print()}
-              className="h-8 gap-1.5 rounded-lg border-slate-200 text-xs font-semibold text-slate-600 hover:border-[#1a7a4a] hover:text-[#1a7a4a] shadow-none cursor-pointer"
+              className="h-8 gap-1.5 rounded-lg border-slate-200 text-sm font-semibold text-slate-600 hover:border-[#1a7a4a] hover:text-[#1a7a4a] shadow-none cursor-pointer"
             >
               <Printer size={13} /> Print
             </Button>
@@ -117,7 +117,7 @@ export default function InvoiceDetailsModal({
               onClick={() => {
                 alert("Simulating PDF download... The file has been formatted successfully.");
               }}
-              className="h-8 gap-1.5 rounded-lg border-slate-200 text-xs font-semibold text-slate-650 hover:border-[#1a7a4a] hover:text-[#1a7a4a] shadow-none cursor-pointer"
+              className="h-8 gap-1.5 rounded-lg border-slate-200 text-sm font-semibold text-slate-650 hover:border-[#1a7a4a] hover:text-[#1a7a4a] shadow-none cursor-pointer"
             >
               <Download size={13} /> Export PDF
             </Button>
@@ -147,7 +147,7 @@ export default function InvoiceDetailsModal({
                     ⚖️
                   </div>
                   <div>
-                    <h4 className="text-xs font-bold text-[#1A4331] leading-none">Adebayo & Associates</h4>
+                    <h4 className="text-sm font-bold text-[#1A4331] leading-none">Adebayo & Associates</h4>
                     <span className="text-[8px] text-slate-400 font-semibold block mt-0.5">Legal Practitioners & Consultants</span>
                   </div>
                 </div>

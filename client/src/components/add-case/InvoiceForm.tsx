@@ -139,7 +139,7 @@ export default function InvoiceForm({
               ⚖️
             </div>
             <div>
-              <h4 className="text-xs font-bold text-[#1A4331] leading-none">Adebayo & Associates</h4>
+              <h4 className="text-sm font-bold text-[#1A4331] leading-none">Adebayo & Associates</h4>
               <span className="text-[8px] text-slate-400 font-semibold block mt-0.5">Legal Practitioners & Consultants</span>
             </div>
           </div>
@@ -303,7 +303,7 @@ export default function InvoiceForm({
 
         {/* ── MOBILE: Step indicator bar ── */}
         <div className="md:hidden flex items-center justify-between px-4 py-2.5 bg-white border-b border-slate-100 shrink-0">
-          <div className="flex items-center gap-2 text-xs font-bold">
+          <div className="flex items-center gap-2 text-sm font-bold">
             <span className={cn(
               "flex items-center justify-center h-5 w-5 rounded-full text-[10px] font-bold",
               mobileStep === "form" ? "bg-[#1A4331] text-white" : "bg-slate-100 text-slate-400"
@@ -360,13 +360,13 @@ export default function InvoiceForm({
           </div>
 
           <div className="bg-slate-50 border border-slate-100 rounded-xl p-3.5 space-y-1">
-            <h4 className="text-xs font-bold text-slate-800">Contingency Billing</h4>
+            <h4 className="text-sm font-bold text-slate-800">Contingency Billing</h4>
             <p className="text-[10px] text-slate-500 font-semibold">Charge a one-time fee for legal services</p>
           </div>
 
           {/* Details Section */}
           <div className="space-y-4">
-            <h4 className="text-xs font-bold text-slate-850 border-b border-slate-100 pb-1 uppercase tracking-wider text-[10px]">Details</h4>
+            <h4 className="text-sm font-bold text-slate-850 border-b border-slate-100 pb-1 uppercase tracking-wider text-[10px]">Details</h4>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div>
@@ -375,7 +375,7 @@ export default function InvoiceForm({
                   value={invoiceClientName}
                   onChange={(e) => setInvoiceClientName(e.target.value)}
                   placeholder="Enter name"
-                  className="h-9 text-xs border-slate-200 rounded-lg shadow-none focus-visible:ring-1 focus-visible:ring-[#1a7a4a]"
+                  className="h-9 text-sm border-slate-200 rounded-lg shadow-none focus-visible:ring-1 focus-visible:ring-[#1a7a4a]"
                 />
               </div>
               <div>
@@ -385,7 +385,7 @@ export default function InvoiceForm({
                   value={invoiceClientEmail}
                   onChange={(e) => setInvoiceClientEmail(e.target.value)}
                   placeholder="Enter email"
-                  className="h-9 text-xs border-slate-200 rounded-lg shadow-none focus-visible:ring-1 focus-visible:ring-[#1a7a4a]"
+                  className="h-9 text-sm border-slate-200 rounded-lg shadow-none focus-visible:ring-1 focus-visible:ring-[#1a7a4a]"
                 />
               </div>
             </div>
@@ -397,7 +397,7 @@ export default function InvoiceForm({
                   value={invoiceSuitNumber}
                   onChange={(e) => setInvoiceSuitNumber(e.target.value)}
                   placeholder="Enter suit number"
-                  className="h-9 text-xs border-slate-200 rounded-lg shadow-none focus-visible:ring-1 focus-visible:ring-[#1a7a4a]"
+                  className="h-9 text-sm border-slate-200 rounded-lg shadow-none focus-visible:ring-1 focus-visible:ring-[#1a7a4a]"
                 />
               </div>
               <div>
@@ -406,7 +406,7 @@ export default function InvoiceForm({
                   value={invoiceClientPhone}
                   onChange={(e) => setInvoiceClientPhone(e.target.value)}
                   placeholder="Mobile number"
-                  className="h-9 text-xs border-slate-200 rounded-lg shadow-none focus-visible:ring-1 focus-visible:ring-[#1a7a4a]"
+                  className="h-9 text-sm border-slate-200 rounded-lg shadow-none focus-visible:ring-1 focus-visible:ring-[#1a7a4a]"
                 />
               </div>
             </div>
@@ -417,7 +417,7 @@ export default function InvoiceForm({
                 value={invoiceClientAddress}
                 onChange={(e) => setInvoiceClientAddress(e.target.value)}
                 placeholder="Address"
-                className="h-9 text-xs border-slate-200 rounded-lg shadow-none focus-visible:ring-1 focus-visible:ring-[#1a7a4a]"
+                className="h-9 text-sm border-slate-200 rounded-lg shadow-none focus-visible:ring-1 focus-visible:ring-[#1a7a4a]"
               />
             </div>
 
@@ -425,13 +425,13 @@ export default function InvoiceForm({
               <div>
                 <FieldLabel>Case Title</FieldLabel>
                 <Select value={invoiceCaseTitle} onValueChange={setInvoiceCaseTitle}>
-                  <SelectTrigger className="w-full h-9 text-xs border-slate-200 rounded-lg shadow-none focus:ring-1 focus:ring-[#1a7a4a]">
+                  <SelectTrigger className="w-full h-9 text-sm border-slate-200 rounded-lg shadow-none focus:ring-1 focus:ring-[#1a7a4a]">
                     <SelectValue placeholder="Case title" />
                   </SelectTrigger>
                   <SelectContent className="rounded-xl">
-                    <SelectItem value="johnson-v-techcorp" className="text-xs">Johnson vs. TechCorp Inc.</SelectItem>
-                    <SelectItem value="ojo-v-lagos" className="text-xs">Ojo vs. Lagos State Gov.</SelectItem>
-                    <SelectItem value="firs-tax" className="text-xs">Okonkwo vs. FIRS Tax</SelectItem>
+                    <SelectItem value="johnson-v-techcorp" className="text-sm">Johnson vs. TechCorp Inc.</SelectItem>
+                    <SelectItem value="ojo-v-lagos" className="text-sm">Ojo vs. Lagos State Gov.</SelectItem>
+                    <SelectItem value="firs-tax" className="text-sm">Okonkwo vs. FIRS Tax</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
@@ -439,13 +439,13 @@ export default function InvoiceForm({
               <div>
                 <FieldLabel>Billing Trigger</FieldLabel>
                 <Select value={billingTrigger} onValueChange={setBillingTrigger}>
-                  <SelectTrigger className="w-full h-9 text-xs border-slate-200 rounded-lg shadow-none focus:ring-1 focus:ring-[#1a7a4a]">
+                  <SelectTrigger className="w-full h-9 text-sm border-slate-200 rounded-lg shadow-none focus:ring-1 focus:ring-[#1a7a4a]">
                     <SelectValue placeholder="Billing trigger" />
                   </SelectTrigger>
                   <SelectContent className="rounded-xl">
-                    <SelectItem value="retainer" className="text-xs">Retainer</SelectItem>
-                    <SelectItem value="milestone" className="text-xs">Milestone</SelectItem>
-                    <SelectItem value="completion" className="text-xs">Upon Completion</SelectItem>
+                    <SelectItem value="retainer" className="text-sm">Retainer</SelectItem>
+                    <SelectItem value="milestone" className="text-sm">Milestone</SelectItem>
+                    <SelectItem value="completion" className="text-sm">Upon Completion</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
@@ -458,7 +458,7 @@ export default function InvoiceForm({
                   type="date"
                   value={invoiceIssuedDate}
                   onChange={(e) => setInvoiceIssuedDate(e.target.value)}
-                  className="h-9 text-xs border-slate-200 rounded-lg shadow-none focus-visible:ring-1 focus-visible:ring-[#1a7a4a] text-slate-500"
+                  className="h-9 text-sm border-slate-200 rounded-lg shadow-none focus-visible:ring-1 focus-visible:ring-[#1a7a4a] text-slate-500"
                 />
               </div>
               <div>
@@ -467,7 +467,7 @@ export default function InvoiceForm({
                   type="date"
                   value={invoiceDueDate}
                   onChange={(e) => setInvoiceDueDate(e.target.value)}
-                  className="h-9 text-xs border-slate-200 rounded-lg shadow-none focus-visible:ring-1 focus-visible:ring-[#1a7a4a] text-slate-500"
+                  className="h-9 text-sm border-slate-200 rounded-lg shadow-none focus-visible:ring-1 focus-visible:ring-[#1a7a4a] text-slate-500"
                 />
               </div>
             </div>
@@ -478,14 +478,14 @@ export default function InvoiceForm({
                 value={contingencyFee}
                 onChange={(e) => setContingencyFee(e.target.value)}
                 placeholder="₦"
-                className="h-9 text-xs border-slate-200 rounded-lg shadow-none focus-visible:ring-1 focus-visible:ring-[#1a7a4a]"
+                className="h-9 text-sm border-slate-200 rounded-lg shadow-none focus-visible:ring-1 focus-visible:ring-[#1a7a4a]"
               />
             </div>
           </div>
 
           {/* Invoice Items */}
           <div className="space-y-3 border-t border-slate-100 pt-2 md:pt-4">
-            <h4 className="text-xs font-bold text-slate-805 uppercase tracking-wider text-[10px]">Invoice Items</h4>
+            <h4 className="text-sm font-bold text-slate-805 uppercase tracking-wider text-[10px]">Invoice Items</h4>
 
             <div className="space-y-3 max-h-52 overflow-y-auto no-scrollbar">
               {invoiceItems.map((item, idx) => (
@@ -497,7 +497,7 @@ export default function InvoiceForm({
                         value={item.item}
                         onChange={(e) => updateInvoiceItem(idx, "item", e.target.value)}
                         placeholder="Title of product/service"
-                        className="h-9 text-xs border-slate-200 rounded-lg shadow-none focus-visible:ring-1 focus-visible:ring-[#1a7a4a]"
+                        className="h-9 text-sm border-slate-200 rounded-lg shadow-none focus-visible:ring-1 focus-visible:ring-[#1a7a4a]"
                       />
                     </div>
                     <div className="grid grid-cols-2">
@@ -507,7 +507,7 @@ export default function InvoiceForm({
                         value={item.unitPrice}
                         onChange={(e) => updateInvoiceItem(idx, "unitPrice", e.target.value)}
                         placeholder="Price"
-                        className="h-9 text-xs border-slate-200 rounded-lg shadow-none focus-visible:ring-1 focus-visible:ring-[#1a7a4a]"
+                        className="h-9 text-sm border-slate-200 rounded-lg shadow-none focus-visible:ring-1 focus-visible:ring-[#1a7a4a]"
                       />
                     </div>
                     <div className="col-span-3">
@@ -516,7 +516,7 @@ export default function InvoiceForm({
                         value={item.quantity}
                         onChange={(e) => updateInvoiceItem(idx, "quantity", e.target.value)}
                         placeholder="Qty"
-                        className="h-9 text-xs border-slate-200 rounded-lg shadow-none focus-visible:ring-1 focus-visible:ring-[#1a7a4a]"
+                        className="h-9 text-sm border-slate-200 rounded-lg shadow-none focus-visible:ring-1 focus-visible:ring-[#1a7a4a]"
                       />
                     </div>
 
@@ -541,7 +541,7 @@ export default function InvoiceForm({
             <button
               type="button"
               onClick={addInvoiceItem}
-              className="flex items-center gap-1.5 text-xs font-bold text-slate-500 hover:text-[#1A4331] transition-colors cursor-pointer"
+              className="flex items-center gap-1.5 text-sm font-bold text-slate-500 hover:text-[#1A4331] transition-colors cursor-pointer"
             >
               <Plus size={13} /> Add Item
             </button>
@@ -549,9 +549,9 @@ export default function InvoiceForm({
 
           {/* Payment Structure */}
           <div className="space-y-3 border-t border-slate-100 pt-4">
-            <h4 className="text-xs font-bold text-slate-805 uppercase tracking-wider text-[10px]">Payment Structure</h4>
+            <h4 className="text-sm font-bold text-slate-805 uppercase tracking-wider text-[10px]">Payment Structure</h4>
             <div className="space-y-2">
-              <label className="flex items-center gap-2 text-xs cursor-pointer select-none">
+              <label className="flex items-center gap-2 text-sm cursor-pointer select-none">
                 <input
                   type="radio"
                   name="paymentStructure"
@@ -562,7 +562,7 @@ export default function InvoiceForm({
                 <span className="font-semibold text-slate-700">100% Upfront</span>
                 <span className="ml-auto font-bold text-slate-800">{formatCurrency(subtotal)}</span>
               </label>
-              <label className="flex items-center gap-2 text-xs cursor-pointer select-none">
+              <label className="flex items-center gap-2 text-sm cursor-pointer select-none">
                 <input
                   type="radio"
                   name="paymentStructure"
@@ -579,7 +579,7 @@ export default function InvoiceForm({
                     value={installmentCount}
                     onChange={(e) => setInstallmentCount(e.target.value)}
                     min={2}
-                    className="h-8 w-16 text-xs border-slate-200 rounded-lg shadow-none text-center focus-visible:ring-1 focus-visible:ring-[#1a7a4a]"
+                    className="h-8 w-16 text-sm border-slate-200 rounded-lg shadow-none text-center focus-visible:ring-1 focus-visible:ring-[#1a7a4a]"
                   />
                   <span className="text-[11px] text-slate-500 font-semibold">
                     &times; {formatCurrency(installmentAmount)} each
@@ -591,8 +591,8 @@ export default function InvoiceForm({
 
           {/* VAT */}
           <div className="space-y-2 border-t border-slate-100 pt-4">
-            <h4 className="text-xs font-bold text-slate-805 uppercase tracking-wider text-[10px]">VAT (Optional)</h4>
-            <label className="flex items-center gap-2 text-xs cursor-pointer select-none">
+            <h4 className="text-sm font-bold text-slate-805 uppercase tracking-wider text-[10px]">VAT (Optional)</h4>
+            <label className="flex items-center gap-2 text-sm cursor-pointer select-none">
               <input
                 type="checkbox"
                 checked={includeVat}
@@ -619,7 +619,7 @@ export default function InvoiceForm({
             {/* Mobile: "Preview Invoice" advances to step 2 */}
             <Button
               onClick={() => setMobileStep("preview")}
-              className="flex-1 md:hidden bg-[#1A4331] hover:bg-[#133224] text-white h-11 text-xs font-bold rounded-lg cursor-pointer border border-[#1A4331] flex items-center justify-center gap-2"
+              className="flex-1 md:hidden bg-[#1A4331] hover:bg-[#133224] text-white h-11 text-sm font-bold rounded-lg cursor-pointer border border-[#1A4331] flex items-center justify-center gap-2"
             >
               <Eye size={14} /> Preview Invoice
             </Button>
@@ -627,7 +627,7 @@ export default function InvoiceForm({
             {/* Desktop: direct create */}
             <Button
               onClick={onCreate}
-              className="hidden md:flex flex-1 bg-[#1A4331] hover:bg-[#133224] text-white h-11 text-xs font-bold rounded-lg cursor-pointer border border-[#1A4331] items-center justify-center"
+              className="hidden md:flex flex-1 bg-[#1A4331] hover:bg-[#133224] text-white h-11 text-sm font-bold rounded-lg cursor-pointer border border-[#1A4331] items-center justify-center"
             >
               Create Invoice
             </Button>
@@ -648,13 +648,13 @@ export default function InvoiceForm({
             <button
               type="button"
               onClick={() => setMobileStep("form")}
-              className="flex items-center gap-1.5 text-xs font-bold text-slate-600 hover:text-[#1A4331] transition-colors cursor-pointer"
+              className="flex items-center gap-1.5 text-sm font-bold text-slate-600 hover:text-[#1A4331] transition-colors cursor-pointer"
             >
               <ArrowLeft size={14} /> Back to Form
             </button>
             <Button
               onClick={onCreate}
-              className="bg-[#1A4331] hover:bg-[#133224] text-white h-8 px-4 text-xs font-bold rounded-lg cursor-pointer"
+              className="bg-[#1A4331] hover:bg-[#133224] text-white h-8 px-4 text-sm font-bold rounded-lg cursor-pointer"
             >
               Create Invoice
             </Button>

@@ -45,7 +45,7 @@ export default function ConflictCheckModal({
           <div className="flex flex-col items-center justify-center py-10 text-center max-w-sm mx-auto">
             <Loader2 className="w-12 h-12 text-[#055939] animate-spin mb-4" />
             <h3 className="text-base md:text-lg font-bold text-slate-800">Checking Conflict of interest...</h3>
-            <p className="text-xs text-slate-400 mt-1">This will only take a moment.</p>
+            <p className="text-sm text-slate-400 mt-1">This will only take a moment.</p>
           </div>
         ) : simulationMode === "clean" ? (
           // Clean Path (No conflict detected)
@@ -62,7 +62,7 @@ export default function ConflictCheckModal({
             </div>
 
             <h3 className="text-base md:text-lg font-bold text-slate-800">No Conflict of Interest Detected.</h3>
-            <p className="text-xs text-slate-500 mt-2 px-2">
+            <p className="text-sm text-slate-500 mt-2 px-2">
               You may proceed with <span className="font-semibold text-slate-800">{clientName || "this client"}</span>. No existing conflicts were found in the system.
             </p>
 
@@ -97,7 +97,7 @@ export default function ConflictCheckModal({
 
             {/* Conflict Summary */}
             <div className="mb-4">
-              <h4 className="text-xs font-bo ld text-slate-700 uppercase tracking-wide">Conflict Summary</h4>
+              <h4 className="text-sm font-bo ld text-slate-700 uppercase tracking-wide">Conflict Summary</h4>
               <p className="text-[12.5px] text-slate-400 mt-1">
                 This case may present a conflict with an existing client or matter already associated with your firm.
               </p>
@@ -105,7 +105,7 @@ export default function ConflictCheckModal({
 
             {/* Conflicting Records Table */}
             <div className="border border-slate-100 rounded-xl overflow-hidden mb-6">
-              <table className="w-full text-left text-xs border-collapse">
+              <table className="w-full text-left text-sm border-collapse">
                 <thead>
                   <tr className="bg-slate-50 border-b border-slate-100 font-bold text-slate-500 uppercase tracking-wider">
                     <th className="py-2.5 px-1 text-center md:text-start md:px-3">Type</th>
@@ -136,14 +136,14 @@ export default function ConflictCheckModal({
               <Button
                 variant="outline"
                 onClick={onViewDetails}
-                className="h-10 border-slate-200 hover:bg-slate-50 text-slate-700 font-semibold  px-2 md:px-4 text-xs rounded-lg cursor-pointer"
+                className="h-10 border-slate-200 hover:bg-slate-50 text-slate-700 font-semibold  px-2 md:px-4 text-sm rounded-lg cursor-pointer"
               >
                 View Conflict Details and Resolve
               </Button>
               <Button
                 variant="outline"
                 onClick={onCancel}
-                className="h-10 bg-red-600 hover:bg-slate-50 text-white font-semibold px-4 text-xs rounded-lg cursor-pointer"
+                className="h-10 bg-red-600 hover:bg-slate-50 text-white font-semibold px-4 text-sm rounded-lg cursor-pointer"
               >
                 Dismiss and go back
               </Button>

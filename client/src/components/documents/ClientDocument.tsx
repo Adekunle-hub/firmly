@@ -55,11 +55,11 @@ export default function ClientDocument() {
         <div className="flex items-center justify-between">
           <div className="space-y-1.5">
             <h1 className="text-lg font-bold text-slate-800">Case_Summary_Olu_FBN.pdf</h1>
-            <Link href="/documents" className="inline-flex items-center gap-1 text-xs font-bold text-slate-900 hover:underline">
+            <Link href="/documents" className="inline-flex items-center gap-1 text-sm font-bold text-slate-900 hover:underline">
               <ChevronLeft size={16} strokeWidth={2.5} /> Back
             </Link>
           </div>
-          <Button className="bg-[#1A6341] text-white hover:bg-[#134D32] h-10 px-4 text-xs font-bold rounded-lg flex items-center gap-1.5 shadow-xs"
+          <Button className="bg-[#1A6341] text-white hover:bg-[#134D32] h-10 px-4 text-sm font-bold rounded-lg flex items-center gap-1.5 shadow-xs"
           onClick={() => setIsAddModalOpen(true)}
           >
             Add Document
@@ -68,7 +68,7 @@ export default function ClientDocument() {
 
         {/* Center Context Filters Tab Bar Switcher */}
         <div className="flex justify-center border-b border-slate-200/60 pt-2">
-          <div className="flex items-center gap-8 text-xs font-bold tracking-wide">
+          <div className="flex items-center gap-8 text-sm font-bold tracking-wide">
             {(["clients", "case", "evidence"] as const).map((tab) => (
               <button
                 key={tab}
@@ -85,10 +85,10 @@ export default function ClientDocument() {
 
         {/* Control Sub-Filter Layout Grid */}
         <div className="bg-white border border-slate-100 rounded-xl p-3 flex flex-wrap items-center gap-3">
-          <Button variant="outline" className="h-9 bg-[#F8F9FA] border-none text-slate-600 font-semibold text-xs rounded-lg gap-2 shadow-none">
+          <Button variant="outline" className="h-9 bg-[#F8F9FA] border-none text-slate-600 font-semibold text-sm rounded-lg gap-2 shadow-none">
             <SlidersHorizontal size={13} /> All Status
           </Button>
-          <Button variant="outline" className="h-9 bg-[#F8F9FA] border-none text-slate-600 font-semibold text-xs rounded-lg gap-2 shadow-none">
+          <Button variant="outline" className="h-9 bg-[#F8F9FA] border-none text-slate-600 font-semibold text-sm rounded-lg gap-2 shadow-none">
             <FileText size={13} /> All Document Types
           </Button>
         </div>

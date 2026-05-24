@@ -38,7 +38,7 @@ export default function Next7Days() {
         </CardTitle>
         <Link
           href="/dashboard/calendar"
-          className="text-xs font-medium text-[#1a7a4a] hover:underline"
+          className="text-sm font-medium text-[#1a7a4a] hover:underline"
         >
           Calendar
         </Link>

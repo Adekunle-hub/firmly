@@ -37,7 +37,7 @@ export default function SettingsHubPage() {
       {/* Settings Breadcrumb & Banner Header */}
       <header className="bg-white border-b border-slate-100 px-2 sm:px-4 md:px-8 py-5">
         <h1 className="text-xl font-bold tracking-tight text-slate-900">Settings & Configuration</h1>
-        <p className="text-xs text-slate-400 font-medium mt-0.5">
+        <p className="text-sm text-slate-400 font-medium mt-0.5">
           Configure firm settings, notifications, regulatory compliance, and integrations
         </p>
       </header>
@@ -51,7 +51,7 @@ export default function SettingsHubPage() {
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`flex items-center gap-2 px-4 py-3.5 text-xs font-bold whitespace-nowrap border-b-2 transition-all relative ${
+              className={`flex items-center gap-2 px-4 py-3.5 text-sm font-bold whitespace-nowrap border-b-2 transition-all relative ${
                 isActive 
                   ? "border-[#055939] text-[#055939]" 
                   : "border-transparent text-slate-400 hover:text-slate-600"
@@ -76,12 +76,12 @@ export default function SettingsHubPage() {
 
       {/* Fixed Sticky Action Commands Save Layout Footer Banner */}
       <footer className="fixed bottom-0 left-0 right-0 bg-white border-t border-slate-100 px-8 py-4 flex items-center justify-end gap-3 shadow-2xl z-40">
-        <Button variant="ghost" className="text-xs hover:border-red-900 hover:bg-red-700/70 transition-colors ease-in-out duration-300 cursor-pointer font-bold text-slate-500 h-10 px-5 rounded-xl">
+        <Button variant="ghost" className="text-sm hover:border-red-900 hover:bg-red-700/70 transition-colors ease-in-out duration-300 cursor-pointer font-bold text-slate-500 h-10 px-5 rounded-xl">
           Cancel
         </Button>
         <Button 
           onClick={handleSaveAllConfigurations}
-          className="bg-[#055939] cursor-pointer hover:bg-[#04432b] text-white text-xs font-bold h-10 px-6 rounded-xl shadow-sm transition-all"
+          className="bg-[#055939] cursor-pointer hover:bg-[#04432b] text-white text-sm font-bold h-10 px-6 rounded-xl shadow-sm transition-all"
         >
           Save Configuration
         </Button>

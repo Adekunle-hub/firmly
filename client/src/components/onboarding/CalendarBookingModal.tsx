@@ -73,11 +73,11 @@ export default function CalendarBookingModal({
             <Calendar className="w-5 h-5 text-[#055939]" />
             Calendar Booking
           </h3>
-          <p className="text-xs text-slate-400 mt-0.5">Schedule your first consultation</p>
+          <p className="text-sm text-slate-400 mt-0.5">Schedule your first consultation</p>
         </div>
 
         {/* Client details card */}
-        <div className="bg-[#FAF7F6] border border-slate-100 rounded-xl p-4 mb-4 flex flex-col gap-1.5 text-xs text-slate-600">
+        <div className="bg-[#FAF7F6] border border-slate-100 rounded-xl p-4 mb-4 flex flex-col gap-1.5 text-sm text-slate-600">
           <div className="flex justify-between font-bold text-slate-800 text-[13px]">
             <span>{clientName}</span>
             <span className="font-normal text-slate-400 break-all">{clientEmail}</span>
@@ -98,7 +98,7 @@ export default function CalendarBookingModal({
                 value={startDate}
                 onChange={(e) => setStartDate(e.target.value)}
                 required
-                className="h-9 text-xs rounded-xl"
+                className="h-9 text-sm rounded-xl"
               />
             </div>
             <div className="flex flex-col gap-1">
@@ -110,12 +110,12 @@ export default function CalendarBookingModal({
                   value={startTime}
                   onChange={(e) => setStartTime(e.target.value)}
                   required
-                  className="h-9 text-xs rounded-xl flex-1 text-center"
+                  className="h-9 text-sm rounded-xl flex-1 text-center"
                 />
                 <select
                   value={startPeriod}
                   onChange={(e) => setStartPeriod(e.target.value)}
-                  className="h-9 rounded-xl border border-slate-200 bg-white px-2 text-xs text-slate-700 focus:outline-none"
+                  className="h-9 rounded-xl border border-slate-200 bg-white px-2 text-sm text-slate-700 focus:outline-none"
                 >
                   <option value="AM">AM</option>
                   <option value="PM">PM</option>
@@ -133,7 +133,7 @@ export default function CalendarBookingModal({
                 value={endDate}
                 onChange={(e) => setEndDate(e.target.value)}
                 required
-                className="h-9 text-xs rounded-xl"
+                className="h-9 text-sm rounded-xl"
               />
             </div>
             <div className="flex flex-col gap-1">
@@ -145,12 +145,12 @@ export default function CalendarBookingModal({
                   value={endTime}
                   onChange={(e) => setEndTime(e.target.value)}
                   required
-                  className="h-9 text-xs rounded-xl flex-1 text-center"
+                  className="h-9 text-sm rounded-xl flex-1 text-center"
                 />
                 <select
                   value={endPeriod}
                   onChange={(e) => setEndPeriod(e.target.value)}
-                  className="h-9 rounded-xl border border-slate-200 bg-white px-2 text-xs text-slate-700 focus:outline-none"
+                  className="h-9 rounded-xl border border-slate-200 bg-white px-2 text-sm text-slate-700 focus:outline-none"
                 >
                   <option value="AM">AM</option>
                   <option value="PM">PM</option>
@@ -185,7 +185,7 @@ export default function CalendarBookingModal({
               placeholder="E.g. Agenda, special requests..."
               value={additionalNotes}
               onChange={(e) => setAdditionalNotes(e.target.value)}
-              className="w-full rounded-xl border border-slate-200 p-2.5 text-xs focus:outline-none focus:ring-1 focus:ring-[#1a7a4a] focus:border-[#1a7a4a]"
+              className="w-full rounded-xl border border-slate-200 p-2.5 text-sm focus:outline-none focus:ring-1 focus:ring-[#1a7a4a] focus:border-[#1a7a4a]"
             />
           </div>
 

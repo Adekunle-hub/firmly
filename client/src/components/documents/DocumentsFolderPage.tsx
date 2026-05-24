@@ -47,7 +47,7 @@ export default function DocumentManagementPage() {
             <h1 className="text-2xl font-bold tracking-tight text-slate-900">
               Document Management
             </h1>
-            <p className="text-xs text-slate-500 mt-0.5">
+            <p className="text-sm text-slate-500 mt-0.5">
               {activeTab === "templates"
                 ? "Manage and organize legal templates"
                 : "Organize and manage your legal documents"}
@@ -56,12 +56,12 @@ export default function DocumentManagementPage() {
           <div className="flex items-center gap-3">
             {activeTab === "case-documents" && (
               <>
-                <Button className="bg-[#1A6341] text-white cursor-pointer hover:bg-[#134D32] h-9 px-4 text-xs font-semibold rounded-lg flex items-center gap-1.5 shadow-sm">
+                <Button className="bg-[#1A6341] text-white cursor-pointer hover:bg-[#134D32] h-9 px-4 text-sm font-semibold rounded-lg flex items-center gap-1.5 shadow-sm">
                   <FolderPlus size={14} /> New Folder
                 </Button>
                 <Button
                   variant="outline"
-                  className="border-slate-200 cursor-pointer text-slate-700 hover:bg-slate-50 h-9 px-4 text-xs font-semibold rounded-lg flex items-center gap-1.5"
+                  className="border-slate-200 cursor-pointer text-slate-700 hover:bg-slate-50 h-9 px-4 text-sm font-semibold rounded-lg flex items-center gap-1.5"
                 >
                   <Upload size={14} /> Upload File
                 </Button>
@@ -80,7 +80,7 @@ export default function DocumentManagementPage() {
 
         {/* Tab Bar — always visible */}
         <div className="flex justify-center border-b border-slate-200/60 pt-4">
-          <div className="flex items-center gap-6 md:gap-8 text-xs font-bold tracking-wide">
+          <div className="flex items-center gap-6 md:gap-8 text-sm font-bold tracking-wide">
             {(
               [
                 { key: "case-documents", label: "Case Documents" },

@@ -45,7 +45,7 @@ export default function BillingSummaryTable() {
         <CardTitle className="text-base font-semibold tracking-tight">
           Billing Summary by Revenue Type
         </CardTitle>
-        <CardDescription className="text-xs text-muted-foreground">
+        <CardDescription className="text-sm text-muted-foreground">
           Revenue breakdown across billing categories
         </CardDescription>
       </CardHeader>
@@ -55,16 +55,16 @@ export default function BillingSummaryTable() {
         <Table>
           <TableHeader>
             <TableRow className="bg-muted/50 hover:bg-muted/50">
-              <TableHead className="text-xs font-medium text-muted-foreground pl-6 w-[40%]">
+              <TableHead className="text-sm font-medium text-muted-foreground pl-6 w-[40%]">
                 Billing Type
               </TableHead>
-              <TableHead className="text-xs font-medium text-muted-foreground text-right">
+              <TableHead className="text-sm font-medium text-muted-foreground text-right">
                 Count
               </TableHead>
-              <TableHead className="text-xs font-medium text-muted-foreground text-right">
+              <TableHead className="text-sm font-medium text-muted-foreground text-right">
                 Revenue
               </TableHead>
-              <TableHead className="text-xs font-medium text-muted-foreground text-right pr-6">
+              <TableHead className="text-sm font-medium text-muted-foreground text-right pr-6">
                 %
               </TableHead>
             </TableRow>
@@ -98,7 +98,7 @@ export default function BillingSummaryTable() {
                    
                     <Badge
                       variant={getVariant(row.percentage)}
-                      className="text-xs font-medium min-w-11.5 justify-center"
+                      className="text-sm font-medium min-w-11.5 justify-center"
                     >
                       {row.percentage}%
                     </Badge>
@@ -119,7 +119,7 @@ export default function BillingSummaryTable() {
                 {TOTAL.revenue}
               </TableCell>
               <TableCell className="text-right pr-6 py-4">
-                <Badge className="text-xs font-bold min-w-11.5 justify-center">
+                <Badge className="text-sm font-bold min-w-11.5 justify-center">
                   {TOTAL.percentage}%
                 </Badge>
               </TableCell>

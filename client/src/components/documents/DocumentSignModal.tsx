@@ -47,7 +47,7 @@ export default function DocuSignModal({ isOpen, onClose }: DocuSignModalProps) {
       <DialogContent className="max-w-md w-full p-6 h-[80vh] overflow-y-auto bg-white no-scrollbar rounded-2xl border border-slate-100 shadow-2xl gap-0 block">
         {/* Header Labeling Block */}
         <div className="flex items-center justify-between pb-3 mb-4 border-b border-slate-50">
-          <DialogTitle className="text-xs font-bold text-slate-800">
+          <DialogTitle className="text-sm font-bold text-slate-800">
             Execute Document with DocuSign
           </DialogTitle>
           <Button
@@ -70,7 +70,7 @@ export default function DocuSignModal({ isOpen, onClose }: DocuSignModalProps) {
               {(["Lawyer", "Client"] as const).map((targetRole) => (
                 <label
                   key={targetRole}
-                  className="flex items-center gap-2 text-xs font-bold text-slate-800 cursor-pointer"
+                  className="flex items-center gap-2 text-sm font-bold text-slate-800 cursor-pointer"
                 >
                   <input
                     type="radio"
@@ -97,7 +97,7 @@ export default function DocuSignModal({ isOpen, onClose }: DocuSignModalProps) {
               placeholder="Enter name"
               value={signerName}
               onChange={(e) => setSignerName(e.target.value)}
-              className="h-10 border-slate-200 text-xs rounded-lg"
+              className="h-10 border-slate-200 text-sm rounded-lg"
             />
           </div>
 
@@ -162,7 +162,7 @@ export default function DocuSignModal({ isOpen, onClose }: DocuSignModalProps) {
               placeholder="Email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="h-10 border-slate-200 text-xs rounded-lg"
+              className="h-10 border-slate-200 text-sm rounded-lg"
             />
           </div>
 
@@ -171,10 +171,10 @@ export default function DocuSignModal({ isOpen, onClose }: DocuSignModalProps) {
               Link to Case
             </label>
             <Select value={caseLink} onValueChange={setCaseLink}>
-              <SelectTrigger className="h-10 border-slate-200 text-xs rounded-lg text-slate-600 font-medium">
+              <SelectTrigger className="h-10 border-slate-200 text-sm rounded-lg text-slate-600 font-medium">
                 <SelectValue placeholder="Select" />
               </SelectTrigger>
-              <SelectContent className="bg-white border text-xs font-medium rounded-lg">
+              <SelectContent className="bg-white border text-sm font-medium rounded-lg">
                 <SelectItem value="case-1">Case: LD/142/2025</SelectItem>
                 <SelectItem value="case-2">Case: LD/078/2025</SelectItem>
               </SelectContent>
@@ -186,7 +186,7 @@ export default function DocuSignModal({ isOpen, onClose }: DocuSignModalProps) {
           <Button
             type="button"
             onClick={handleExecute}
-            className="w-full h-10 bg-[#1A6341] hover:bg-[#134D32] text-white text-xs font-bold rounded-lg shadow-sm"
+            className="w-full h-10 bg-[#1A6341] hover:bg-[#134D32] text-white text-sm font-bold rounded-lg shadow-sm"
           >
             Execute
           </Button>
@@ -194,7 +194,7 @@ export default function DocuSignModal({ isOpen, onClose }: DocuSignModalProps) {
             type="button"
             onClick={handleExecuteAndShare}
             variant="outline"
-            className="w-full cursor-pointer h-10 border-slate-200 text-slate-700 text-xs font-bold rounded-lg hover:bg-slate-50"
+            className="w-full cursor-pointer h-10 border-slate-200 text-slate-700 text-sm font-bold rounded-lg hover:bg-slate-50"
           >
             Execute and Share
           </Button>

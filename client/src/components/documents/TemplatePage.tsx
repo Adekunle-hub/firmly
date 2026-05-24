@@ -16,7 +16,7 @@ export default function TemplatesContent() {
       <div className="flex items-center justify-end">
         <Button
           onClick={() => setIsModalOpen(true)}
-          className="bg-[#1A6341] text-white hover:bg-[#134D32] text-xs font-bold h-10 px-4 rounded-lg flex items-center gap-2"
+          className="bg-[#1A6341] text-white hover:bg-[#134D32] text-sm font-bold h-10 px-4 rounded-lg flex items-center gap-2"
         >
           <Plus size={16} /> New Template
         </Button>

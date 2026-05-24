@@ -17,7 +17,7 @@ export default function ConflictReviewPage() {
   return (
     <Suspense
       fallback={
-        <div className="flex items-center justify-center p-20 text-xs text-slate-400">
+        <div className="flex items-center justify-center p-20 text-sm text-slate-400">
           Loading review parameters...
         </div>
       }
@@ -103,7 +103,7 @@ function ConflictReviewContent() {
         <button
           type="button"
           onClick={() => handleRedirectBackToWorkflowStep(1)}
-          className="flex items-center gap-1.5 text-xs font-bold text-slate-500 hover:text-slate-800 transition-colors w-fit cursor-pointer"
+          className="flex items-center gap-1.5 text-sm font-bold text-slate-500 hover:text-slate-800 transition-colors w-fit cursor-pointer"
         >
           <ArrowLeft className="w-4 h-4" />
           Cancel and return to form
@@ -117,7 +117,7 @@ function ConflictReviewContent() {
             <h1 className="text-xl font-bold text-slate-900">
               Conflict Review
             </h1>
-            <p className="text-xs text-slate-400 mt-0.5">{caseTitle}</p>
+            <p className="text-sm text-slate-400 mt-0.5">{caseTitle}</p>
           </div>
         </div>
 
@@ -143,14 +143,14 @@ function ConflictReviewContent() {
               type="button"
               variant="outline"
               onClick={() => handleRedirectBackToWorkflowStep(1)}
-              className="flex-1 h-11 border-slate-200 text-slate-700 font-bold text-xs rounded-xl"
+              className="flex-1 h-11 border-slate-200 text-slate-700 font-bold text-sm rounded-xl"
             >
               Cancel
             </Button>
             <Button
               type="submit"
               disabled={!canSubmit || isSubmitting}
-              className={`flex-1 h-11 text-white text-xs font-bold rounded-xl transition-colors ${
+              className={`flex-1 h-11 text-white text-sm font-bold rounded-xl transition-colors ${
                 canSubmit && !isSubmitting
                   ? "bg-[#055939] hover:bg-[#044c30]"
                   : "bg-slate-200 text-slate-400"

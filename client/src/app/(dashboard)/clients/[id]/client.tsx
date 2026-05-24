@@ -340,7 +340,7 @@ export default function ClientDetailComponent({ id }: ClientDetailProps) {
                   {client.name}
                 </h1>
               </div>
-              <p className="text-xs md:text-[12.5px] text-emerald-300/80 font-mono mt-0 md:mt-0.5">
+              <p className="text-sm md:text-[12.5px] text-emerald-300/80 font-mono mt-0 md:mt-0.5">
                 Client ID: {client.clientId}
               </p>
             </div>
@@ -497,7 +497,7 @@ export default function ClientDetailComponent({ id }: ClientDetailProps) {
                
                 Linked Cases
               </h2>
-              <span className="text-xs text-slate-400 mt-1 block">
+              <span className="text-sm text-slate-400 mt-1 block">
                 {client.linkedCases.length}{" "}
                 {client.linkedCases.length === 1 ? "case" : "cases"} associated
                 with this client

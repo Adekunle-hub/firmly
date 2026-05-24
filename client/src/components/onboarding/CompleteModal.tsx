@@ -29,7 +29,7 @@ export default function CompleteModal({
         </div>
 
         <h3 className="text-base md:text-lg font-bold text-slate-800">Client Created!</h3>
-        <p className="text-xs text-slate-500 mt-2 px-2">
+        <p className="text-sm text-slate-500 mt-2 px-2">
           <span className="font-bold text-slate-800">{clientName || "The client"}</span> has been successfully added to your client list. Go to all client pages to view.
         </p>
 

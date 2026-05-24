@@ -25,7 +25,7 @@ export default function AuthFooter({ maxWidth = "584px" }: Props) {
             </a>
 
             {i < links.length - 1 && (
-              <span className="text-firmly-muted text-xs">·</span>
+              <span className="text-firmly-muted text-sm">·</span>
             )}
           </span>
         ))}

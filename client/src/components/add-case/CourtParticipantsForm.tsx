@@ -171,7 +171,7 @@ export default function CourtParticipantsForm({
         </div>
         <div className="flex-1 space-y-2">
           <div className="flex items-center gap-2">
-            <p className="text-xs font-bold text-red-800">
+            <p className="text-sm font-bold text-red-800">
               Statute of Limitations Advisory
             </p>
             <span className="text-[8px] bg-red-100 text-red-700 border border-red-200 rounded-sm font-bold px-1.5 py-0.5 uppercase tracking-wide">
@@ -181,7 +181,7 @@ export default function CourtParticipantsForm({
           <p className="text-[11px] text-red-700 leading-relaxed font-medium">
             Based on the incident date provided, the filing deadline for this action is approaching.
           </p>
-          <div className="flex gap-3 text-xs mt-1">
+          <div className="flex gap-3 text-sm mt-1">
             <div className="bg-white border border-red-100 rounded-lg px-3 py-1.5 shadow-xs">
               <span className="text-[9px] text-red-500 font-bold uppercase block">Last Possible Date</span>
               <span className="font-bold text-red-800">Oct 24, 2027</span>
@@ -198,21 +198,21 @@ export default function CourtParticipantsForm({
       <Card className="rounded-xl border border-slate-200 bg-white shadow-none p-3 md:p-5 space-y-2 md:space-y-4">
         <div className="flex items-center gap-2 border-b border-slate-55 pb-0 md:pb-2">
           <span className="text-base" role="img" aria-hidden="true">⚖️</span>
-          <h3 className="text-xs font-bold uppercase tracking-wider text-slate-700">Court Information</h3>
+          <h3 className="text-sm font-bold uppercase tracking-wider text-slate-700">Court Information</h3>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <FieldLabel>Court Tier</FieldLabel>
             <Select value={courtTier} onValueChange={setCourtTier}>
-              <SelectTrigger className="w-full   text-xs border-slate-200 rounded-lg shadow-none focus:ring-1 focus:ring-[#1a7a4a]">
+              <SelectTrigger className="w-full   text-sm border-slate-200 rounded-lg shadow-none focus:ring-1 focus:ring-[#1a7a4a]">
                 <SelectValue className="bg-red-900!" placeholder="Select" />
               </SelectTrigger>
               <SelectContent className="rounded-xl">
-                <SelectItem value="high-court" className="text-xs">High Court</SelectItem>
-                <SelectItem value="magistrate" className="text-xs">Magistrate Court</SelectItem>
-                <SelectItem value="appeal" className="text-xs">Court of Appeal</SelectItem>
-                <SelectItem value="supreme" className="text-xs">Supreme Court</SelectItem>
+                <SelectItem value="high-court" className="text-sm">High Court</SelectItem>
+                <SelectItem value="magistrate" className="text-sm">Magistrate Court</SelectItem>
+                <SelectItem value="appeal" className="text-sm">Court of Appeal</SelectItem>
+                <SelectItem value="supreme" className="text-sm">Supreme Court</SelectItem>
               </SelectContent>
             </Select>
           </div>
@@ -222,7 +222,7 @@ export default function CourtParticipantsForm({
               value={courtName}
               onChange={(e) => setCourtName(e.target.value)}
               placeholder="Enter Court Tier first"
-              className="h-10 text-xs border-slate-200 rounded-lg shadow-none focus-visible:ring-1 focus-visible:ring-[#1a7a4a]"
+              className="h-10 text-sm border-slate-200 rounded-lg shadow-none focus-visible:ring-1 focus-visible:ring-[#1a7a4a]"
             />
           </div>
         </div>
@@ -233,7 +233,7 @@ export default function CourtParticipantsForm({
             value={stateJurisdiction}
             onChange={(e) => setStateJurisdiction(e.target.value)}
             placeholder="Enter state"
-            className="h-10 text-xs border-slate-200 rounded-lg shadow-none focus-visible:ring-1 focus-visible:ring-[#1a7a4a]"
+            className="h-10 text-sm border-slate-200 rounded-lg shadow-none focus-visible:ring-1 focus-visible:ring-[#1a7a4a]"
           />
         </div>
 
@@ -243,7 +243,7 @@ export default function CourtParticipantsForm({
             value={presidingJudge}
             onChange={(e) => setPresidingJudge(e.target.value)}
             placeholder="Enter judge name"
-            className="h-10 text-xs border-slate-200 rounded-lg shadow-none focus-visible:ring-1 focus-visible:ring-[#1a7a4a]"
+            className="h-10 text-sm border-slate-200 rounded-lg shadow-none focus-visible:ring-1 focus-visible:ring-[#1a7a4a]"
           />
         </div>
 
@@ -252,7 +252,7 @@ export default function CourtParticipantsForm({
           <button
             type="button"
             onClick={() => setShowAddJudges(!showAddJudges)}
-            className="flex items-center gap-2 text-xs font-bold text-slate-700 cursor-pointer hover:text-[#1A4331] transition-colors"
+            className="flex items-center gap-2 text-sm font-bold text-slate-700 cursor-pointer hover:text-[#1A4331] transition-colors"
           >
             <div className="h-5 w-5 rounded bg-slate-100 flex items-center justify-center text-slate-500">
               {showAddJudges ? <X size={10} /> : <Plus size={10} />}
@@ -268,7 +268,7 @@ export default function CourtParticipantsForm({
                     value={judge}
                     onChange={(e) => updateJudge(idx, e.target.value)}
                     placeholder="e.g., Hon. Justice Balogun"
-                    className="h-10 text-xs border-slate-200 rounded-lg shadow-none flex-1 focus-visible:ring-1 focus-visible:ring-[#1a7a4a]"
+                    className="h-10 text-sm border-slate-200 rounded-lg shadow-none flex-1 focus-visible:ring-1 focus-visible:ring-[#1a7a4a]"
                   />
                   {idx === additionalJudges.length - 1 ? (
                     <Button
@@ -302,7 +302,7 @@ export default function CourtParticipantsForm({
       <Card className="rounded-xl border border-slate-200 bg-white shadow-none p-3 md:p-5 space-y-2 md:space-y-4">
         <div className="flex items-center gap-2 border-b border-slate-55 pb-2">
           <span className="text-base" role="img" aria-hidden="true">👥</span>
-          <h3 className="text-xs font-bold uppercase tracking-wider text-slate-700">Participants</h3>
+          <h3 className="text-sm font-bold uppercase tracking-wider text-slate-700">Participants</h3>
         </div>
 
         <div>
@@ -311,7 +311,7 @@ export default function CourtParticipantsForm({
             value={opposingParty}
             onChange={(e) => setOpposingParty(e.target.value)}
             placeholder="Enter opposing party name"
-            className="h-10 text-xs border-slate-200 rounded-lg shadow-none focus-visible:ring-1 focus-visible:ring-[#1a7a4a]"
+            className="h-10 text-sm border-slate-200 rounded-lg shadow-none focus-visible:ring-1 focus-visible:ring-[#1a7a4a]"
           />
         </div>
         <div>
@@ -320,7 +320,7 @@ export default function CourtParticipantsForm({
             value={opposingCounsel}
             onChange={(e) => setOpposingCounsel(e.target.value)}
             placeholder="Enter opposing counsel name"
-            className="h-10 text-xs border-slate-200 rounded-lg shadow-none focus-visible:ring-1 focus-visible:ring-[#1a7a4a]"
+            className="h-10 text-sm border-slate-200 rounded-lg shadow-none focus-visible:ring-1 focus-visible:ring-[#1a7a4a]"
           />
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -331,7 +331,7 @@ export default function CourtParticipantsForm({
               value={opposingCounselEmail}
               onChange={(e) => setOpposingCounselEmail(e.target.value)}
               placeholder="e.g. counsel@opposing.com"
-              className="h-10 text-xs border-slate-200 rounded-lg shadow-none focus-visible:ring-1 focus-visible:ring-[#1a7a4a]"
+              className="h-10 text-sm border-slate-200 rounded-lg shadow-none focus-visible:ring-1 focus-visible:ring-[#1a7a4a]"
             />
           </div>
           <div>
@@ -340,7 +340,7 @@ export default function CourtParticipantsForm({
               value={opposingCounselPhone}
               onChange={(e) => setOpposingCounselPhone(e.target.value)}
               placeholder="Enter phone number"
-              className="h-10 text-xs border-slate-200 rounded-lg shadow-none focus-visible:ring-1 focus-visible:ring-[#1a7a4a]"
+              className="h-10 text-sm border-slate-200 rounded-lg shadow-none focus-visible:ring-1 focus-visible:ring-[#1a7a4a]"
             />
           </div>
         </div>
@@ -351,7 +351,7 @@ export default function CourtParticipantsForm({
         <div className="flex items-center justify-between border-b border-slate-55 pb-0 md:pb-2">
           <div className="flex items-center gap-2">
             <span className="text-base" role="img" aria-hidden="true">👤</span>
-            <h3 className="text-xs font-bold uppercase tracking-wider text-slate-700">Witnesses</h3>
+            <h3 className="text-sm font-bold uppercase tracking-wider text-slate-700">Witnesses</h3>
           </div>
           <span className="text-[10px] bg-slate-100 text-slate-500 font-bold px-2 py-0.5 rounded-full">
             Total: {witnesses.length}
@@ -376,7 +376,7 @@ export default function CourtParticipantsForm({
                 value={witness.name}
                 onChange={(e) => updateWitness(idx, "name", e.target.value)}
                 placeholder="Enter witness name"
-                className="h-10 text-xs border-slate-200 rounded-lg shadow-none focus-visible:ring-1 focus-visible:ring-[#1a7a4a]"
+                className="h-10 text-sm border-slate-200 rounded-lg shadow-none focus-visible:ring-1 focus-visible:ring-[#1a7a4a]"
               />
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -386,7 +386,7 @@ export default function CourtParticipantsForm({
                   value={witness.contact}
                   onChange={(e) => updateWitness(idx, "contact", e.target.value)}
                   placeholder="Enter phone/email"
-                  className="h-10 text-xs border-slate-200 rounded-lg shadow-none focus-visible:ring-1 focus-visible:ring-[#1a7a4a]"
+                  className="h-10 text-sm border-slate-200 rounded-lg shadow-none focus-visible:ring-1 focus-visible:ring-[#1a7a4a]"
                 />
               </div>
               <div>
@@ -395,7 +395,7 @@ export default function CourtParticipantsForm({
                   value={witness.relationship}
                   onChange={(e) => updateWitness(idx, "relationship", e.target.value)}
                   placeholder="e.g. Eyewitness, Supervisor"
-                  className="h-10 text-xs border-slate-200 rounded-lg shadow-none focus-visible:ring-1 focus-visible:ring-[#1a7a4a]"
+                  className="h-10 text-sm border-slate-200 rounded-lg shadow-none focus-visible:ring-1 focus-visible:ring-[#1a7a4a]"
                 />
               </div>
             </div>
@@ -405,7 +405,7 @@ export default function CourtParticipantsForm({
                 value={witness.opposingCounsel}
                 onChange={(e) => updateWitness(idx, "opposingCounsel", e.target.value)}
                 placeholder="Enter opposing counsel"
-                className="h-10 text-xs border-slate-200 rounded-lg shadow-none focus-visible:ring-1 focus-visible:ring-[#1a7a4a]"
+                className="h-10 text-sm border-slate-200 rounded-lg shadow-none focus-visible:ring-1 focus-visible:ring-[#1a7a4a]"
               />
             </div>
             <div>
@@ -415,7 +415,7 @@ export default function CourtParticipantsForm({
                 onChange={(e) => updateWitness(idx, "statement", e.target.value)}
                 rows={3}
                 placeholder="Enter witness statement details..."
-                className="w-full p-3 text-xs border border-slate-200 rounded-lg bg-white focus:outline-none focus:ring-1 focus:ring-[#1a7a4a] resize-none shadow-none text-slate-800"
+                className="w-full p-3 text-sm border border-slate-200 rounded-lg bg-white focus:outline-none focus:ring-1 focus:ring-[#1a7a4a] resize-none shadow-none text-slate-800"
               />
             </div>
           </div>
@@ -424,7 +424,7 @@ export default function CourtParticipantsForm({
         <button
           type="button"
           onClick={addWitness}
-          className="w-full border-2 border-dashed border-slate-200 rounded-lg py-2.5 text-xs font-semibold text-slate-500 hover:text-[#1A4331] hover:border-[#1A4331]/30 transition-colors cursor-pointer flex items-center justify-center gap-1.5"
+          className="w-full border-2 border-dashed border-slate-200 rounded-lg py-2.5 text-sm font-semibold text-slate-500 hover:text-[#1A4331] hover:border-[#1A4331]/30 transition-colors cursor-pointer flex items-center justify-center gap-1.5"
         >
           <Plus size={13} /> Add Witness
         </button>
@@ -434,7 +434,7 @@ export default function CourtParticipantsForm({
       <Card className="rounded-xl border border-slate-200 bg-white shadow-none p-3 space-y-2 md:p-5 md:space-y-4">
         <div className="flex items-center gap-2 border-b border-slate-55 pb-1 md:pb-2">
           <span className="text-base" role="img" aria-hidden="true">📅</span>
-          <h3 className="text-xs font-bold uppercase tracking-wider text-slate-700">Important Dates</h3>
+          <h3 className="text-sm font-bold uppercase tracking-wider text-slate-700">Important Dates</h3>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 md:gap-4">
@@ -444,7 +444,7 @@ export default function CourtParticipantsForm({
               type="date"
               value={incidentDate}
               onChange={(e) => setIncidentDate(e.target.value)}
-              className="h-10 text-xs border-slate-200 rounded-lg shadow-none focus-visible:ring-1 focus-visible:ring-[#1a7a4a] text-slate-650"
+              className="h-10 text-sm border-slate-200 rounded-lg shadow-none focus-visible:ring-1 focus-visible:ring-[#1a7a4a] text-slate-650"
             />
           </div>
           <div>
@@ -453,7 +453,7 @@ export default function CourtParticipantsForm({
               type="date"
               value={filingDate}
               onChange={(e) => setFilingDate(e.target.value)}
-              className="h-10 text-xs border-slate-200 rounded-lg shadow-none focus-visible:ring-1 focus-visible:ring-[#1a7a4a] text-slate-650"
+              className="h-10 text-sm border-slate-200 rounded-lg shadow-none focus-visible:ring-1 focus-visible:ring-[#1a7a4a] text-slate-650"
             />
           </div>
           <div>
@@ -462,14 +462,14 @@ export default function CourtParticipantsForm({
               type="date"
               value={hearingDate}
               onChange={(e) => setHearingDate(e.target.value)}
-              className="h-10 text-xs border-slate-200 rounded-lg shadow-none focus-visible:ring-1 focus-visible:ring-[#1a7a4a] text-slate-650"
+              className="h-10 text-sm border-slate-200 rounded-lg shadow-none focus-visible:ring-1 focus-visible:ring-[#1a7a4a] text-slate-650"
             />
           </div>
         </div>
 
         <button 
           type="button" 
-          className="w-full border border-dashed border-slate-200 rounded-lg py-2.5 text-xs font-semibold text-slate-500 hover:text-[#1A4331] hover:border-[#1A4331]/30 transition-colors cursor-pointer flex items-center justify-center gap-1.5"
+          className="w-full border border-dashed border-slate-200 rounded-lg py-2.5 text-sm font-semibold text-slate-500 hover:text-[#1A4331] hover:border-[#1A4331]/30 transition-colors cursor-pointer flex items-center justify-center gap-1.5"
         >
           <Plus size={13} /> Add Date
         </button>
@@ -480,7 +480,7 @@ export default function CourtParticipantsForm({
         <div className="flex  md:flex-row flex-col  items-start md:items-center  justify-start md:justify-between border-b border-slate-55 pb-1 md:pb-2">
           <div className="flex items-center gap-2">
             <span className="text-base" role="img" aria-hidden="true">📂</span>
-            <h3 className="text-xs font-bold uppercase tracking-wider text-slate-700">Evidence</h3>
+            <h3 className="text-sm font-bold uppercase tracking-wider text-slate-700">Evidence</h3>
           </div>
           <div className="flex items-center gap-2 text-[10px] text-slate-400">
             <span>Storage: {(evidenceFiles.length * 4.9).toFixed(1)} GB / 50 GB</span>
@@ -561,7 +561,7 @@ export default function CourtParticipantsForm({
             onChange={(e) => setSaveAsDraft(e.target.checked)}
             className="h-4 w-4 rounded border-slate-300 text-[#1A4331] focus:ring-[#1A4331] accent-[#1A4331] cursor-pointer"
           />
-          <label htmlFor="draft-checkbox-step2" className="text-xs text-slate-500 font-semibold cursor-pointer select-none">
+          <label htmlFor="draft-checkbox-step2" className="text-sm text-slate-500 font-semibold cursor-pointer select-none">
             Save as Draft
           </label>
         </div>
@@ -569,13 +569,13 @@ export default function CourtParticipantsForm({
           <Button
             variant="outline"
             onClick={onBack}
-            className="h-9 px-4 text-xs border-slate-200 hover:bg-slate-50 shadow-none rounded-lg text-slate-650 cursor-pointer"
+            className="h-9 px-4 text-sm border-slate-200 hover:bg-slate-50 shadow-none rounded-lg text-slate-650 cursor-pointer"
           >
             Cancel
           </Button>
           <Button
             onClick={onNext}
-            className="h-9 px-4 text-xs bg-[#1A4331] hover:bg-[#133224] text-white rounded-lg shadow-sm cursor-pointer gap-1.5 font-semibold"
+            className="h-9 px-4 text-sm bg-[#1A4331] hover:bg-[#133224] text-white rounded-lg shadow-sm cursor-pointer gap-1.5 font-semibold"
           >
             Next <span className="text-[10px]">→</span>
           </Button>

@@ -53,7 +53,7 @@ export default function StatsCards() {
           >
             <CardContent className="px-2 py-1 md:p-3 ">
               <div className="flex items-center justify-between ">
-                <span className="text-xs font-medium text-slate-500">{stat.label}</span>
+                <span className="text-sm font-medium text-slate-500">{stat.label}</span>
                 <div className={cn("flex h-8 w-8 items-center justify-center rounded-lg", stat.iconBg)}>
                   <Icon size={15} className={stat.iconColor} />
                 </div>

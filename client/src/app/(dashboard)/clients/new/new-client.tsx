@@ -166,7 +166,7 @@ export default function NewClientWorkflow() {
       <div className="flex flex-col  gap-6 w-full max-w-7xl mx-auto pb-10">
         <button
           onClick={handleBackClick}
-          className="flex items-center gap-1.5 text-xs font-bold text-slate-500 hover:text-slate-800 transition-colors w-fit cursor-pointer"
+          className="flex items-center gap-1.5 text-sm font-bold text-slate-500 hover:text-slate-800 transition-colors w-fit cursor-pointer"
         >
           <ChevronLeft className="w-4 h-4" />
           Back

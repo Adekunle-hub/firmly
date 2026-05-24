@@ -37,7 +37,7 @@ export default function ComplianceAlerts() {
     <Card className="rounded-xl border border-slate-200 bg-white shadow-none">
       <CardHeader className="pb-3 pt-6 px-4">
         <CardTitle className="text-sm font-semibold text-[#181D1A] flex gap-1 items-center">
-         <AlertTriangle size={14} className="text-[#BA1A1A] text-xs"/> Compliance Alerts
+         <AlertTriangle size={14} className="text-[#BA1A1A] text-sm"/> Compliance Alerts
         </CardTitle>
       </CardHeader>
       <CardContent className="px-4 pb-1 flex flex-col gap-3">

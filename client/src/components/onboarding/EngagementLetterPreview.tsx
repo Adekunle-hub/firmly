@@ -48,13 +48,13 @@ export default function EngagementLetterPreview({
             <FileText className="w-5 h-5 text-[#055939]" />
             Engagement Letter Preview
           </h2>
-          <p className="text-xs text-slate-400 mt-0.5">Draft agreement based on client details</p>
+          <p className="text-sm text-slate-400 mt-0.5">Draft agreement based on client details</p>
         </div>
         <Button
           variant="outline"
           size="sm"
           onClick={() => setIsEditing(!isEditing)}
-          className="h-8 border-slate-200 text-slate-700 text-xs rounded-lg flex items-center gap-1.5 hover:bg-slate-50 cursor-pointer"
+          className="h-8 border-slate-200 text-slate-700 text-sm rounded-lg flex items-center gap-1.5 hover:bg-slate-50 cursor-pointer"
         >
           {isEditing ? (
             <>
@@ -119,7 +119,7 @@ export default function EngagementLetterPreview({
                     newScope[idx] = e.target.value;
                     setScopeOfService(newScope);
                   }}
-                  className="h-8 rounded-lg text-xs"
+                  className="h-8 rounded-lg text-sm"
                 />
               ))}
             </div>
@@ -146,7 +146,7 @@ export default function EngagementLetterPreview({
                     newFees[idx] = e.target.value;
                     setFees(newFees);
                   }}
-                  className="h-8 rounded-lg text-xs"
+                  className="h-8 rounded-lg text-sm"
                 />
               ))}
             </div>

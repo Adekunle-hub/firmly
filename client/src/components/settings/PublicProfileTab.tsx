@@ -25,11 +25,11 @@ export default function PublicProfileTab() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div className="space-y-1.5 md:col-span-2">
             <label className="text-[11px] font-bold text-slate-700">Full Name</label>
-            <Input defaultValue="Adejoke Owolabi" className="h-10 text-xs rounded-xl" />
+            <Input defaultValue="Adejoke Owolabi" className="h-10 text-sm rounded-xl" />
           </div>
           <div className="space-y-1.5">
             <label className="text-[11px] font-bold text-slate-700">Professional Title</label>
-            <Input defaultValue="ESQ." className="h-10 text-xs rounded-xl" />
+            <Input defaultValue="ESQ." className="h-10 text-sm rounded-xl" />
           </div>
         </div>
 
@@ -37,7 +37,7 @@ export default function PublicProfileTab() {
           <label className="text-[11px] font-bold text-slate-700">Bio / Professional Description</label>
           <textarea 
             rows={4} 
-            className="w-full border border-slate-200 rounded-xl p-3 text-xs font-medium focus:outline-none focus:ring-1 focus:ring-emerald-600"
+            className="w-full border border-slate-200 rounded-xl p-3 text-sm font-medium focus:outline-none focus:ring-1 focus:ring-emerald-600"
             defaultValue="Lorem ipsum dolor sit amet consectetur..."
           />
         </div>
@@ -46,22 +46,22 @@ export default function PublicProfileTab() {
           <div className="space-y-1.5">
             <label className="text-[11px] font-bold text-slate-700">Practice Area</label>
             <Select defaultValue="litigation">
-              <SelectTrigger className="h-10 text-xs rounded-xl"><SelectValue /></SelectTrigger>
-              <SelectContent className="bg-white text-xs"><SelectItem value="litigation">Litigation</SelectItem></SelectContent>
+              <SelectTrigger className="h-10 text-sm rounded-xl"><SelectValue /></SelectTrigger>
+              <SelectContent className="bg-white text-sm"><SelectItem value="litigation">Litigation</SelectItem></SelectContent>
             </Select>
           </div>
           <div className="space-y-1.5">
             <label className="text-[11px] font-bold text-slate-700">City</label>
             <Select defaultValue="lekki">
-              <SelectTrigger className="h-10 text-xs rounded-xl"><SelectValue /></SelectTrigger>
-              <SelectContent className="bg-white text-xs"><SelectItem value="lekki">Lekki</SelectItem></SelectContent>
+              <SelectTrigger className="h-10 text-sm rounded-xl"><SelectValue /></SelectTrigger>
+              <SelectContent className="bg-white text-sm"><SelectItem value="lekki">Lekki</SelectItem></SelectContent>
             </Select>
           </div>
           <div className="space-y-1.5">
             <label className="text-[11px] font-bold text-slate-700">State</label>
             <Select defaultValue="lagos">
-              <SelectTrigger className="h-10 text-xs rounded-xl"><SelectValue /></SelectTrigger>
-              <SelectContent className="bg-white text-xs"><SelectItem value="lagos">Lagos</SelectItem></SelectContent>
+              <SelectTrigger className="h-10 text-sm rounded-xl"><SelectValue /></SelectTrigger>
+              <SelectContent className="bg-white text-sm"><SelectItem value="lagos">Lagos</SelectItem></SelectContent>
             </Select>
           </div>
         </div>
@@ -73,7 +73,7 @@ export default function PublicProfileTab() {
             {servicesList.map((service) => (
               <div key={service.id} className="flex items-center gap-3 p-3 border border-slate-100 rounded-xl hover:bg-slate-50/50">
                 <Checkbox id={service.id} defaultChecked={service.id === "consult"} className="rounded border-slate-300" />
-                <label htmlFor={service.id} className="text-xs font-semibold text-slate-700 cursor-pointer">{service.label}</label>
+                <label htmlFor={service.id} className="text-sm font-semibold text-slate-700 cursor-pointer">{service.label}</label>
               </div>
             ))}
           </div>

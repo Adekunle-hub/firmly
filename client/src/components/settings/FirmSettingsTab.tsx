@@ -19,36 +19,36 @@ export default function FirmSettingsTab() {
           <div className="h-16 w-16 rounded-full bg-slate-100 border border-slate-200 flex items-center justify-center text-slate-400 font-bold text-2xl">
             A
           </div>
-          <button className="text-xs font-bold text-emerald-700 hover:underline">Edit Picture</button>
+          <button className="text-sm font-bold text-emerald-700 hover:underline">Edit Picture</button>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4">
           <div className="space-y-1.5 md:col-span-2">
             <label className="text-[11px] font-bold text-slate-700">Firm Name</label>
-            <Input value={firmName} onChange={(e) => setFirmName(e.target.value)} className="h-10 text-xs rounded-xl" />
+            <Input value={firmName} onChange={(e) => setFirmName(e.target.value)} className="h-10 text-sm rounded-xl" />
           </div>
           <div className="space-y-1.5">
             <label className="text-[11px] font-bold text-slate-700">Primary Contact</label>
-            <Input defaultValue="+234 801 234 5678" className="h-10 text-xs rounded-xl" />
+            <Input defaultValue="+234 801 234 5678" className="h-10 text-sm rounded-xl" />
           </div>
           <div className="space-y-1.5">
             <label className="text-[11px] font-bold text-slate-700">Primary Email</label>
-            <Input defaultValue="info@adewalelaw.ng" className="h-10 text-xs rounded-xl" />
+            <Input defaultValue="info@adewalelaw.ng" className="h-10 text-sm rounded-xl" />
           </div>
           <div className="space-y-1.5 md:col-span-2">
             <label className="text-[11px] font-bold text-slate-700">Address</label>
-            <Input placeholder="Enter Address" className="h-10 text-xs rounded-xl" />
+            <Input placeholder="Enter Address" className="h-10 text-sm rounded-xl" />
           </div>
           <div className="space-y-1.5">
             <label className="text-[11px] font-bold text-slate-700">Default Currency</label>
             <Select defaultValue="ngn">
-              <SelectTrigger className="h-10 text-xs rounded-xl"><SelectValue /></SelectTrigger>
-              <SelectContent className="bg-white text-xs font-medium"><SelectItem value="ngn">NGN - Nigerian Naira</SelectItem></SelectContent>
+              <SelectTrigger className="h-10 text-sm rounded-xl"><SelectValue /></SelectTrigger>
+              <SelectContent className="bg-white text-sm font-medium"><SelectItem value="ngn">NGN - Nigerian Naira</SelectItem></SelectContent>
             </Select>
           </div>
           <div className="space-y-1.5">
             <label className="text-[11px] font-bold text-slate-700">VAT Number</label>
-            <Input defaultValue="VAT-NG-12345678" className="h-10 text-xs rounded-xl" />
+            <Input defaultValue="VAT-NG-12345678" className="h-10 text-sm rounded-xl" />
           </div>
         </div>
       </div>
@@ -80,7 +80,7 @@ export default function FirmSettingsTab() {
             <div className="flex items-center gap-2">
               <div className="h-9 w-9 rounded-xl border border-slate-100 shadow-inner" style={{ backgroundColor: brandColor }} />
               <div className="relative flex-1">
-                <Input value={brandColor} onChange={(e) => setBrandColor(e.target.value)} className="h-9 text-xs pl-3 font-mono rounded-lg" />
+                <Input value={brandColor} onChange={(e) => setBrandColor(e.target.value)} className="h-9 text-sm pl-3 font-mono rounded-lg" />
                 <Copy size={12} className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 cursor-pointer" />
               </div>
             </div>

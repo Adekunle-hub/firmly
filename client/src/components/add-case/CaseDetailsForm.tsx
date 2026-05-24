@@ -107,7 +107,7 @@ export default function CaseDetailsForm({
         <div className="relative">
           <Select value={clientLink} onValueChange={setClientLink}>
             <SelectTrigger 
-              className={`w-full h-10 text-xs rounded-lg shadow-none focus:ring-1 focus:ring-[#1a7a4a] ${
+              className={`w-full h-10 text-sm rounded-lg shadow-none focus:ring-1 focus:ring-[#1a7a4a] ${
                 isClientConflict 
                   ? "border-red-500 bg-red-50/10 focus:ring-red-500" 
                   : "border-slate-200 bg-white"
@@ -116,13 +116,13 @@ export default function CaseDetailsForm({
               <SelectValue placeholder="Select" />
             </SelectTrigger>
             <SelectContent className="rounded-xl">
-              <SelectItem value="zara-johnson" className="text-xs">
+              <SelectItem value="zara-johnson" className="text-sm">
                 Zara Johnson – Property Lease Review
               </SelectItem>
-              <SelectItem value="michael-johnson" className="text-xs">
+              <SelectItem value="michael-johnson" className="text-sm">
                 Michael Johnson – Employment Dispute
               </SelectItem>
-              <SelectItem value="techcorp" className="text-xs">
+              <SelectItem value="techcorp" className="text-sm">
                 TechCorp Inc. – IP Litigation
               </SelectItem>
             </SelectContent>
@@ -145,7 +145,7 @@ export default function CaseDetailsForm({
       <Card className="rounded-xl border border-slate-200 bg-white shadow-none p-2 md:p-5 space-y-2 md:space-y-4">
         <div className="flex items-center gap-2 border-b border-slate-50 pb-2">
           <span className="text-base" role="img" aria-hidden="true">📋</span>
-          <h3 className="text-xs font-bold uppercase tracking-wider text-slate-700">Case Details</h3>
+          <h3 className="text-sm font-bold uppercase tracking-wider text-slate-700">Case Details</h3>
         </div>
 
         <div className="space-y-2 md:space-y-4">
@@ -155,7 +155,7 @@ export default function CaseDetailsForm({
               value={caseTitle}
               onChange={(e) => setCaseTitle(e.target.value)}
               placeholder="e.g. Ojo vs. Lagos State Government"
-              className="h-10 text-xs border-slate-200 rounded-lg shadow-none focus-visible:ring-1 focus-visible:ring-[#1a7a4a]"
+              className="h-10 text-sm border-slate-200 rounded-lg shadow-none focus-visible:ring-1 focus-visible:ring-[#1a7a4a]"
             />
           </div>
 
@@ -165,25 +165,25 @@ export default function CaseDetailsForm({
               value={suitNumber1}
               onChange={(e) => setSuitNumber1(e.target.value)}
               placeholder="e.g LD/123/456"
-              className="h-10 text-xs border-slate-200 rounded-lg shadow-none focus-visible:ring-1 focus-visible:ring-[#1a7a4a]"
+              className="h-10 text-sm border-slate-200 rounded-lg shadow-none focus-visible:ring-1 focus-visible:ring-[#1a7a4a]"
             />
           </div>
 
           <div>
             <FieldLabel>Case Type</FieldLabel>
             <Select value={caseType} onValueChange={setCaseType}>
-              <SelectTrigger className="w-full h-10 text-xs border-slate-200 rounded-lg shadow-none focus:ring-1 focus:ring-[#1a7a4a]">
+              <SelectTrigger className="w-full h-10 text-sm border-slate-200 rounded-lg shadow-none focus:ring-1 focus:ring-[#1a7a4a]">
                 <SelectValue placeholder="Select Category" />
               </SelectTrigger>
               <SelectContent className="rounded-xl">
-                <SelectItem value="criminal" className="text-xs">Criminal Defense</SelectItem>
-                <SelectItem value="civil" className="text-xs">Civil Litigation</SelectItem>
-                <SelectItem value="family" className="text-xs">Family Law</SelectItem>
-                <SelectItem value="corporate" className="text-xs">Corporate Dispute</SelectItem>
-                <SelectItem value="employment" className="text-xs">Employment Law</SelectItem>
-                <SelectItem value="property" className="text-xs">Property Dispute</SelectItem>
-                <SelectItem value="immigration" className="text-xs">Immigration</SelectItem>
-                <SelectItem value="commercial" className="text-xs">Commercial Litigation</SelectItem>
+                <SelectItem value="criminal" className="text-sm">Criminal Defense</SelectItem>
+                <SelectItem value="civil" className="text-sm">Civil Litigation</SelectItem>
+                <SelectItem value="family" className="text-sm">Family Law</SelectItem>
+                <SelectItem value="corporate" className="text-sm">Corporate Dispute</SelectItem>
+                <SelectItem value="employment" className="text-sm">Employment Law</SelectItem>
+                <SelectItem value="property" className="text-sm">Property Dispute</SelectItem>
+                <SelectItem value="immigration" className="text-sm">Immigration</SelectItem>
+                <SelectItem value="commercial" className="text-sm">Commercial Litigation</SelectItem>
               </SelectContent>
             </Select>
           </div>
@@ -195,7 +195,7 @@ export default function CaseDetailsForm({
               onChange={(e) => setDescription(e.target.value)}
               rows={3}
               placeholder="Enter matter scope, objectives, or case summary..."
-              className="w-full p-3 text-xs border border-slate-200 rounded-lg bg-white focus:outline-none focus:ring-1 focus:ring-[#1a7a4a] resize-none shadow-none text-slate-800"
+              className="w-full p-3 text-sm border border-slate-200 rounded-lg bg-white focus:outline-none focus:ring-1 focus:ring-[#1a7a4a] resize-none shadow-none text-slate-800"
             />
           </div>
         </div>
@@ -205,20 +205,20 @@ export default function CaseDetailsForm({
       <Card className="rounded-xl border border-slate-200 bg-white shadow-none p-2 md:p-5 space-y-2 md:space-y-4">
         <div className="flex items-center gap-2 border-b border-slate-50 pb-2">
           <span className="text-base" role="img" aria-hidden="true">📋</span>
-          <h3 className="text-xs font-bold uppercase tracking-wider text-slate-700">Case Details</h3>
+          <h3 className="text-sm font-bold uppercase tracking-wider text-slate-700">Case Details</h3>
         </div>
 
         <div className="space-y-4 ">
           <div>
             <FieldLabel>Priority Level</FieldLabel>
             <Select value={priorityLevel} onValueChange={setPriorityLevel}>
-              <SelectTrigger className="w-full h-8 md:h-10 text-xs border-slate-200 rounded-lg shadow-none focus:ring-1 focus:ring-[#1a7a4a]">
+              <SelectTrigger className="w-full h-8 md:h-10 text-sm border-slate-200 rounded-lg shadow-none focus:ring-1 focus:ring-[#1a7a4a]">
                 <SelectValue placeholder="Select" />
               </SelectTrigger>
               <SelectContent className="rounded-xl">
-                <SelectItem value="high" className="text-xs">High</SelectItem>
-                <SelectItem value="medium" className="text-xs">Medium</SelectItem>
-                <SelectItem value="low" className="text-xs">Low</SelectItem>
+                <SelectItem value="high" className="text-sm">High</SelectItem>
+                <SelectItem value="medium" className="text-sm">Medium</SelectItem>
+                <SelectItem value="low" className="text-sm">Low</SelectItem>
               </SelectContent>
             </Select>
           </div>
@@ -230,7 +230,7 @@ export default function CaseDetailsForm({
                 type="date"
                 value={startDate}
                 onChange={(e) => setStartDate(e.target.value)}
-                className="h-10 text-xs border-slate-200 rounded-lg shadow-none  focus-visible:ring-1 focus-visible:ring-[#1a7a4a] text-slate-600"
+                className="h-10 text-sm border-slate-200 rounded-lg shadow-none  focus-visible:ring-1 focus-visible:ring-[#1a7a4a] text-slate-600"
               />
             </div>
             <div>
@@ -239,7 +239,7 @@ export default function CaseDetailsForm({
                 type="date"
                 value={endDate}
                 onChange={(e) => setEndDate(e.target.value)}
-                className="h-10 text-xs border-slate-200 rounded-lg shadow-none focus-visible:ring-1 focus-visible:ring-[#1a7a4a] text-slate-600"
+                className="h-10 text-sm border-slate-200 rounded-lg shadow-none focus-visible:ring-1 focus-visible:ring-[#1a7a4a] text-slate-600"
               />
             </div>
           </div>
@@ -250,7 +250,7 @@ export default function CaseDetailsForm({
               value={suitNumber2}
               onChange={(e) => setSuitNumber2(e.target.value)}
               placeholder="e.g LD/123/456"
-              className="h-10 text-xs border-slate-200 rounded-lg shadow-none focus-visible:ring-1 focus-visible:ring-[#1a7a4a]"
+              className="h-10 text-sm border-slate-200 rounded-lg shadow-none focus-visible:ring-1 focus-visible:ring-[#1a7a4a]"
             />
           </div>
 
@@ -264,13 +264,13 @@ export default function CaseDetailsForm({
                 className="absolute inset-0 opacity-0 cursor-pointer w-full h-full"
               />
               <Upload size={20} className="text-slate-400 group-hover:scale-105 transition-transform" />
-              <p className="text-xs font-semibold text-slate-600">Choose Files</p>
+              <p className="text-sm font-semibold text-slate-600">Choose Files</p>
               <p className="text-[10px] text-slate-400">PDF, DOC, Images up to 12MB</p>
             </div>
             {step1Files.length > 0 && (
               <div className="mt-3 space-y-1.5">
                 {step1Files.map((file, idx) => (
-                  <div key={idx} className="flex items-center justify-between p-2 bg-slate-50 border border-slate-100 rounded-lg text-xs">
+                  <div key={idx} className="flex items-center justify-between p-2 bg-slate-50 border border-slate-100 rounded-lg text-sm">
                     <span className="text-slate-700 truncate max-w-[80%] font-medium">{file.name}</span>
                     <span className="text-[10px] text-slate-400 shrink-0">{file.size}</span>
                   </div>
@@ -291,7 +291,7 @@ export default function CaseDetailsForm({
             onChange={(e) => setSaveAsDraft(e.target.checked)}
             className="h-4 w-4 rounded border-slate-300 text-[#1A4331] focus:ring-[#1A4331] accent-[#1A4331] cursor-pointer"
           />
-          <label htmlFor="draft-checkbox" className="text-xs text-slate-500 font-semibold cursor-pointer select-none">
+          <label htmlFor="draft-checkbox" className="text-sm text-slate-500 font-semibold cursor-pointer select-none">
             Save as Draft
           </label>
         </div>
@@ -299,13 +299,13 @@ export default function CaseDetailsForm({
           <Button
             variant="outline"
             onClick={onCancel}
-            className="h-9 px-4 text-xs border-slate-200 hover:bg-slate-50 shadow-none rounded-lg text-slate-600 cursor-pointer"
+            className="h-9 px-4 text-sm border-slate-200 hover:bg-slate-50 shadow-none rounded-lg text-slate-600 cursor-pointer"
           >
             Cancel
           </Button>
           <Button
             onClick={onNext}
-            className="h-9 px-4 text-xs bg-[#1A4331] hover:bg-[#133224] text-white rounded-lg shadow-sm cursor-pointer gap-1.5 font-semibold"
+            className="h-9 px-4 text-sm bg-[#1A4331] hover:bg-[#133224] text-white rounded-lg shadow-sm cursor-pointer gap-1.5 font-semibold"
           >
             Next <span className="text-[10px]">→</span>
           </Button>

@@ -28,7 +28,7 @@ export default function LinkCalendarModal({ isOpen, onClose }: LinkCalendarModal
         <header className="px-6 py-5 border-b border-slate-100 flex items-center justify-between bg-white">
           <div>
             <h2 className="text-lg font-bold text-slate-900">Link Google Calendar</h2>
-            <p className="text-xs text-slate-500 mt-1">Sync hearings and deadlines automatically</p>
+            <p className="text-sm text-slate-500 mt-1">Sync hearings and deadlines automatically</p>
           </div>
           <button
             onClick={onClose}
@@ -50,13 +50,13 @@ export default function LinkCalendarModal({ isOpen, onClose }: LinkCalendarModal
               />
               <div>
                 <p className="text-sm font-bold text-slate-900">Google Calendar</p>
-                <p className="text-xs text-slate-500">Connect your Google account</p>
+                <p className="text-sm text-slate-500">Connect your Google account</p>
               </div>
             </div>
 
             <button
               onClick={() => setConnected((c) => !c)}
-              className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-colors cursor-pointer flex items-center gap-1.5 ${
+              className={`px-3 py-1.5 rounded-lg text-sm font-bold transition-colors cursor-pointer flex items-center gap-1.5 ${
                 connected
                   ? "bg-emerald-50 text-emerald-700 border border-emerald-200"
                   : "bg-white text-slate-700 border border-slate-300 hover:border-slate-400"

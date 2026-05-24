@@ -213,7 +213,7 @@ export default function NotificationsDropdown() {
                   {getNotificationIcon(item.type)}
                   <div className="flex-1 min-w-0 pr-2">
                     <p
-                      className={`text-xs tracking-tight ${item.isUnread ? "font-bold text-slate-800 dark:text-zinc-100" : "font-medium text-slate-600 dark:text-zinc-400"}`}
+                      className={`text-sm tracking-tight ${item.isUnread ? "font-bold text-slate-800 dark:text-zinc-100" : "font-medium text-slate-600 dark:text-zinc-400"}`}
                     >
                       {item.title}
                     </p>
@@ -231,7 +231,7 @@ export default function NotificationsDropdown() {
                 <div className="p-3 bg-slate-50 dark:bg-zinc-800 text-slate-300 dark:text-zinc-600 rounded-full mb-2">
                   <Bell size={24} />
                 </div>
-                <p className="text-xs font-bold text-slate-700 dark:text-zinc-400">
+                <p className="text-sm font-bold text-slate-700 dark:text-zinc-400">
                   All caught up!
                 </p>
                 <p className="text-[11px] text-slate-400 dark:text-zinc-500 mt-0.5">

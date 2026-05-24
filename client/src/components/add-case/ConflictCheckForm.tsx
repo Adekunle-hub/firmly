@@ -60,19 +60,19 @@ export default function ConflictCheckForm({ onResolve, onDismiss }: ConflictChec
 
             <div className="bg-red-50 border border-red-200 rounded-xl p-3.5 flex items-start gap-2">
               <AlertTriangle size={15} className="text-red-700 shrink-0 mt-0.5" />
-              <p className="text-xs font-bold text-red-700 leading-snug">
+              <p className="text-sm font-bold text-red-700 leading-snug">
                 A potential conflict was found with an existing client or case. Please review before proceeding
               </p>
             </div>
 
             <div className="space-y-3">
-              <h4 className="text-xs font-bold text-slate-800 uppercase tracking-wider text-[10px]">Conflict Summary</h4>
+              <h4 className="text-sm font-bold text-slate-800 uppercase tracking-wider text-[10px]">Conflict Summary</h4>
               <p className="text-[11px] text-slate-500 leading-relaxed font-semibold">
                 This case may prevent a conflict with an existing client or matter already associated with your firm.
               </p>
 
               <div className="border  border-slate-200 rounded-xl overflow-hidden shadow-xs">
-                <table className="w-full text-xs">
+                <table className="w-full text-sm">
                   <thead>
                     <tr className="bg-slate-50 border-b border-slate-200">
                       <th className="text-left p-3 font-bold text-slate-500 uppercase text-[9px] tracking-wider">Type</th>
@@ -104,14 +104,14 @@ export default function ConflictCheckForm({ onResolve, onDismiss }: ConflictChec
             <div className="flex gap-3 pt-2">
               <Button
                 onClick={onResolve}
-                className="flex-1 bg-[#1A4331] hover:bg-[#133224] text-white h-10 text-xs font-semibold rounded-lg cursor-pointer shadow-sm border border-[#1A4331]"
+                className="flex-1 bg-[#1A4331] hover:bg-[#133224] text-white h-10 text-sm font-semibold rounded-lg cursor-pointer shadow-sm border border-[#1A4331]"
               >
                 Resolve Conflict
               </Button>
               <Button
                 variant="outline"
                 onClick={onDismiss}
-                className="flex-1 h-10 text-xs border-slate-200 hover:bg-slate-50 text-slate-600 font-semibold rounded-lg cursor-pointer shadow-none"
+                className="flex-1 h-10 text-sm border-slate-200 hover:bg-slate-50 text-slate-600 font-semibold rounded-lg cursor-pointer shadow-none"
               >
                 Dismiss and go back
               </Button>

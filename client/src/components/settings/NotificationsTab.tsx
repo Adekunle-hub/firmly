@@ -21,7 +21,7 @@ export default function NotificationsTab() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 border-b border-slate-50 pb-5">
         {["Transaction Emails", "Project Tracking Email", "Reminder Emails", "Promotional Emails"].map((topic, idx) => (
           <div key={idx} className="flex items-center justify-between p-3 bg-slate-50/40 border border-slate-100 rounded-xl">
-            <span className="text-xs font-bold text-slate-700">{topic}</span>
+            <span className="text-sm font-bold text-slate-700">{topic}</span>
             <Switch defaultChecked={idx !== 3} />
           </div>
         ))}
@@ -29,11 +29,11 @@ export default function NotificationsTab() {
 
       {/* Structured Channels Matrix Control Block */}
       <div className="space-y-3">
-        <h4 className="text-xs font-bold text-slate-800 uppercase tracking-wider">Channel Strategy Map</h4>
+        <h4 className="text-sm font-bold text-slate-800 uppercase tracking-wider">Channel Strategy Map</h4>
         <div className="space-y-2">
           {channelsConfig.map((row) => (
             <div key={row.key} className="flex flex-wrap items-center justify-between p-4 border border-slate-100 rounded-xl gap-4 hover:shadow-xs transition-all">
-              <span className="text-xs font-bold text-slate-800 min-w-[160px]">{row.label}</span>
+              <span className="text-sm font-bold text-slate-800 min-w-[160px]">{row.label}</span>
               <div className="flex flex-wrap items-center gap-2">
                 {["Email", "SMS", "In-App", "Whatsapp"].map((mode) => {
                   const active = row.triggers.includes(mode);

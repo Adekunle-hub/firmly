@@ -26,8 +26,8 @@ export default function ConflictResolutionSelector({ value, onChange }: { value:
                 className="mt-0.5 h-4 w-4 text-[#055939] border-slate-300 focus:ring-[#055939]"
               />
               <div className="select-none">
-                <span className="block text-xs font-bold text-slate-900">{option.title}</span>
-                <span className="block text-xs text-slate-400 mt-0.5">{option.description}</span>
+                <span className="block text-sm font-bold text-slate-900">{option.title}</span>
+                <span className="block text-sm text-slate-400 mt-0.5">{option.description}</span>
               </div>
             </label>
           );

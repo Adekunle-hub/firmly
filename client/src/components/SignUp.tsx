@@ -191,7 +191,7 @@ export default function SignupPage() {
               <p className="text-base font-normal text-white/80 leading-relaxed mb-4">
                 {opt.desc}
               </p>
-              <span className="text-xs font-bold tracking-widest text-white/60">
+              <span className="text-sm font-bold tracking-widest text-white/60">
                 {opt.badge}
               </span>
             </button>
@@ -312,7 +312,7 @@ export default function SignupPage() {
             <label className="text-base text-white font-normal">Phone Number</label>
             <div className="flex items-center h-12 rounded-xl bg-white/8 border border-white/10 px-4 gap-3 focus-within:border-[#5cab82] transition-colors">
               <span className="flex items-center gap-1 text-sm bg-white/15 rounded px-2 py-0.5 shrink-0 text-white font-medium">
-                🇳🇬 <span className="text-xs">+234</span>
+                🇳🇬 <span className="text-sm">+234</span>
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <polyline points="6 9 12 15 18 9" />
                 </svg>

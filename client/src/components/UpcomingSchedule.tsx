@@ -77,7 +77,7 @@ export default function UpcomingSchedule() {
               key={tab}
               onClick={() => setActiveTab(tab)} 
               className={cn(
-                "text-xs cursor-pointer pb-2 transition-colors relative font-medium",
+                "text-sm cursor-pointer pb-2 transition-colors relative font-medium",
                 tab === activeTab
                   ? "text-emerald-700 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:bg-emerald-700 font-semibold"
                   : "text-slate-500 hover:text-slate-700",
@@ -138,7 +138,7 @@ export default function UpcomingSchedule() {
 
                       <div className="flex items-center gap-2 mt-0.5">
                         {item.time && (
-                          <p className="text-xs text-emerald-600 font-medium">
+                          <p className="text-sm text-emerald-600 font-medium">
                             {item.time}
                           </p>
                         )}

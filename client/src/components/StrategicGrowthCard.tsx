@@ -54,14 +54,14 @@ export default function StrategicGrowthCard({ onViewMetrics }: StrategicGrowthCa
           <h2 className="text-xl md:text-2xl font-bold tracking-tight">
             Q4 Strategic Growth
           </h2>
-          <p className="text-xs md:text-sm text-emerald-100/80 leading-relaxed max-w-md">
+          <p className="text-sm md:text-sm text-emerald-100/80 leading-relaxed max-w-md">
             Our case resolution efficiency has increased by 14% this quarter. Explore the latest resource allocation reports for your team.
           </p>
         </div>
 
         <Button
           onClick={onViewMetrics}
-          className="bg-white text-[#1A4331] hover:bg-emerald-50 h-10 px-5 text-xs font-semibold rounded-lg shadow-sm border border-transparent transition-all cursor-pointer"
+          className="bg-white text-[#1A4331] hover:bg-emerald-50 h-10 px-5 text-sm font-semibold rounded-lg shadow-sm border border-transparent transition-all cursor-pointer"
         >
           View Performance Metrics
         </Button>

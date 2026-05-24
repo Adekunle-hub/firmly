@@ -254,7 +254,7 @@ export default function ClientManagement() {
                     setPage(1);
                   }}
                   placeholder="Search by name, case ID or phone number"
-                  className="h-9 w-full md:w-64 placeholder:text-xs rounded-lg border-slate-200 bg-slate-50 pl-8  placeholder:text-slate-400 focus-visible:ring-1 focus-visible:ring-[#1a7a4a] shadow-none"
+                  className="h-9 w-full md:w-64 placeholder:text-sm rounded-lg border-slate-200 bg-slate-50 pl-8  placeholder:text-slate-400 focus-visible:ring-1 focus-visible:ring-[#1a7a4a] shadow-none"
                 />
               </div>
               <div className="flex gap-2 md:gap-4 items-start justify-start sm:items-center sm:justify-center">

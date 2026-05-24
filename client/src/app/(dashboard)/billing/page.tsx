@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import {toast} from "sonner"
 import Bounded from "@/components/Bounded";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -133,6 +134,7 @@ export default function BillingPage() {
   }, [MOCK_INVOICES]);
 
   const refreshInvoices = () => {
+    
     setInvoices(getInvoices());
   };
 
@@ -282,6 +284,7 @@ export default function BillingPage() {
             setEditingInvoice(null);
           }}
           onSuccess={() => {
+            toast.success("Email Sent Successfully");
             refreshInvoices();
             setIsCreateOpen(false);
             setEditingInvoice(null);
@@ -308,7 +311,7 @@ export default function BillingPage() {
             setEditingInvoice(null);
             setIsCreateOpen(true);
           }}
-          className="bg-[#1A4331] text-white hover:bg-[#133224] h-10 px-4 text-xs font-semibold rounded-lg shrink-0 cursor-pointer shadow-sm flex items-center gap-1.5"
+          className="bg-[#1A4331] text-white hover:bg-[#133224] h-10 px-4 text-sm font-semibold rounded-lg shrink-0 cursor-pointer shadow-sm flex items-center gap-1.5"
         >
           <Plus size={14} /> Create Invoice
         </Button>
@@ -442,7 +445,7 @@ export default function BillingPage() {
               All Billing Invoices
             </h2>
             {/* Status Pills */}
-            <div className="flex items-center gap-1 bg-slate-100 p-0.5 rounded-lg border border-slate-200/50">
+            <div className="flex w-full items-center gap-1 bg-slate-100 p-0.5 rounded-lg border border-slate-200/50">
               {(["ALL", "PAID", "PENDING", "OVERDUE", "DRAFT"] as const).map(
                 (tab) => (
                   <button
@@ -488,7 +491,7 @@ export default function BillingPage() {
               <Button
                 variant="outline"
                 size="sm"
-                className="h-9 cursor-pointer gap-1.5 rounded-lg border-slate-200 text-xs font-semibold text-slate-600 hover:border-[#1a7a4a] hover:text-[#1a7a4a] shadow-none"
+                className="h-9 cursor-pointer gap-1.5 rounded-lg border-slate-200 text-sm font-semibold text-slate-600 hover:border-[#1a7a4a] hover:text-[#1a7a4a] shadow-none"
               >
                 <SlidersHorizontal size={13} /> Filters
               </Button>
@@ -498,7 +501,7 @@ export default function BillingPage() {
                 onClick={() => {
                   alert("Exporting invoicing ledger sheet in CSV format...");
                 }}
-                className="h-9 cursor-pointer gap-1.5 rounded-lg border-slate-200 text-xs font-semibold text-slate-600 hover:border-[#1a7a4a] hover:text-[#1a7a4a] shadow-none"
+                className="h-9 cursor-pointer gap-1.5 rounded-lg border-slate-200 text-sm font-semibold text-slate-600 hover:border-[#1a7a4a] hover:text-[#1a7a4a] shadow-none"
               >
                 Export Ledger
               </Button>
@@ -725,12 +728,12 @@ export default function BillingPage() {
                 setPage(1);
               }}
             >
-              <SelectTrigger className="h-8 w-17 rounded-lg border-slate-200 text-xs focus:ring-[#1a7a4a] shadow-none font-semibold">
+              <SelectTrigger className="h-8 w-17 rounded-lg border-slate-200 text-sm focus:ring-[#1a7a4a] shadow-none font-semibold">
                 <SelectValue />
               </SelectTrigger>
               <SelectContent className="rounded-xl">
                 {PAGE_SIZE_OPTIONS.map((s) => (
-                  <SelectItem key={s} value={String(s)} className="text-xs">
+                  <SelectItem key={s} value={String(s)} className="text-sm">
                     {s}
                   </SelectItem>
                 ))}
@@ -745,7 +748,7 @@ export default function BillingPage() {
               size="sm"
               disabled={safePage === 1}
               onClick={() => setPage(safePage - 1)}
-              className="h-8 gap-0.5 rounded-lg border-slate-200 px-2.5 text-xs text-slate-600 disabled:opacity-35 shadow-none hover:border-[#1a7a4a] hover:text-[#1a7a4a]"
+              className="h-8 gap-0.5 rounded-lg border-slate-200 px-2.5 text-sm text-slate-600 disabled:opacity-35 shadow-none hover:border-[#1a7a4a] hover:text-[#1a7a4a]"
             >
               <ChevronLeft size={13} /> Prev
             </Button>
@@ -754,7 +757,7 @@ export default function BillingPage() {
               p === "…" ? (
                 <span
                   key={`ellipsis-${i}`}
-                  className="w-7 text-center text-xs text-slate-400 select-none font-bold"
+                  className="w-7 text-center text-sm text-slate-400 select-none font-bold"
                 >
                   …
                 </span>
@@ -763,7 +766,7 @@ export default function BillingPage() {
                   key={p}
                   onClick={() => setPage(p as number)}
                   className={cn(
-                    "h-8 w-8 rounded-lg text-xs font-bold transition-all border",
+                    "h-8 w-8 rounded-lg text-sm font-bold transition-all border",
                     p === safePage
                       ? "bg-[#1a7a4a] text-white border-[#1a7a4a] shadow-sm"
                       : "border-slate-200 bg-white text-slate-600 hover:border-[#1a7a4a] hover:text-[#1a7a4a]"
@@ -779,7 +782,7 @@ export default function BillingPage() {
               size="sm"
               disabled={safePage === totalPages}
               onClick={() => setPage(safePage + 1)}
-              className="h-8 gap-0.5 rounded-lg border-slate-200 px-2.5 text-xs text-slate-600 disabled:opacity-35 shadow-none hover:border-[#1a7a4a] hover:text-[#1a7a4a]"
+              className="h-8 gap-0.5 rounded-lg border-slate-200 px-2.5 text-sm text-slate-600 disabled:opacity-35 shadow-none hover:border-[#1a7a4a] hover:text-[#1a7a4a]"
             >
               Next <ChevronRight size={13} />
             </Button>
@@ -789,7 +792,7 @@ export default function BillingPage() {
 
           {/* Page Jumper */}
           <div className="flex items-center gap-2 shrink-0">
-            <span className="text-xs text-slate-500 whitespace-nowrap font-medium">
+            <span className="text-sm text-slate-500 whitespace-nowrap font-medium">
               Go to Page
             </span>
             <Input
@@ -797,20 +800,20 @@ export default function BillingPage() {
               onChange={(e) => setGoInput(e.target.value)}
               onKeyDown={(e) => e.key === "Enter" && handleGoPage()}
               placeholder={String(safePage)}
-              className="h-8 w-12 rounded-lg border-slate-200 text-center text-xs focus-visible:ring-1 focus-visible:ring-[#1a7a4a] shadow-none font-semibold"
+              className="h-8 w-12 rounded-lg border-slate-200 text-center text-sm focus-visible:ring-1 focus-visible:ring-[#1a7a4a] shadow-none font-semibold"
             />
             <Button
               variant="outline"
               size="sm"
               onClick={handleGoPage}
-              className="h-8 gap-0.5 rounded-lg border-slate-200 px-2.5 text-xs text-slate-650 shadow-none hover:border-[#1a7a4a] hover:text-[#1a7a4a]"
+              className="h-8 gap-0.5 rounded-lg border-slate-200 px-2.5 text-sm text-slate-650 shadow-none hover:border-[#1a7a4a] hover:text-[#1a7a4a]"
             >
               Go <ChevronRight size={12} />
             </Button>
           </div>
 
           {/* Range label */}
-          <span className="ml-auto text-xs text-slate-450 font-bold whitespace-nowrap shrink-0">
+          <span className="ml-auto text-sm text-slate-450 font-bold whitespace-nowrap shrink-0">
             Showing {startIdx}–{endIdx} of {sorted.length}
           </span>
         </div>

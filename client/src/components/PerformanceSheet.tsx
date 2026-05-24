@@ -44,7 +44,7 @@ export default function PerformanceSheet({
             <SheetTitle className="text-xl font-bold text-slate-900 leading-none">
               Performance Metrics
             </SheetTitle>
-            <SheetDescription className="text-xs text-slate-500 font-medium mt-1.5">
+            <SheetDescription className="text-sm text-slate-500 font-medium mt-1.5">
               Q4 Strategic Growth
             </SheetDescription>
           </SheetHeader>
@@ -90,7 +90,7 @@ export default function PerformanceSheet({
 
           {/* Donut Chart (Case by Status) */}
           <div className="border border-slate-100 rounded-xl p-4 bg-white space-y-4">
-            <h3 className="text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <h3 className="text-sm font-bold text-slate-500 uppercase tracking-wider">
               Case by Status
             </h3>
             <div className="relative h-44 w-full flex items-center justify-center">
@@ -129,10 +129,10 @@ export default function PerformanceSheet({
                     className="h-2 w-2 rounded-full"
                     style={{ backgroundColor: item.color }}
                   />
-                  <span className="text-xs font-semibold text-slate-700">
+                  <span className="text-sm font-semibold text-slate-700">
                     {item.name}
                   </span>
-                  <span className="text-xs text-slate-400 font-medium">
+                  <span className="text-sm text-slate-400 font-medium">
                     {item.value}%
                   </span>
                 </div>
@@ -143,7 +143,7 @@ export default function PerformanceSheet({
           {/* Case Utilization (HTML Progress Bars) */}
           <div className="border border-slate-100 rounded-xl p-4 bg-white space-y-4">
             <div className="flex items-center justify-between">
-              <h3 className="text-xs font-bold text-slate-500 uppercase tracking-wider">
+              <h3 className="text-sm font-bold text-slate-500 uppercase tracking-wider">
                 Case Utilization
               </h3>
               <span className="text-[9px] font-bold text-[#1a7a4a] bg-[#10B98122] px-1.5 py-0.5 rounded-sm uppercase tracking-wide">
@@ -154,7 +154,7 @@ export default function PerformanceSheet({
             <div className="space-y-3 pt-1">
               {utilizationData.map((item) => (
                 <div key={item.label} className="space-y-1.5">
-                  <div className="flex justify-between text-xs font-semibold text-slate-700">
+                  <div className="flex justify-between text-sm font-semibold text-slate-700">
                     <span>{item.label}</span>
                     <span>{item.value}%</span>
                   </div>
@@ -171,7 +171,7 @@ export default function PerformanceSheet({
         </div>
 
         {/* Action Button */}
-        <Button className="w-full bg-[#1A4331] text-white hover:bg-[#133224] h-11 text-xs font-semibold rounded-lg mt-6 shadow-sm cursor-pointer">
+        <Button className="w-full bg-[#1A4331] text-white hover:bg-[#133224] h-11 text-sm font-semibold rounded-lg mt-6 shadow-sm cursor-pointer">
           Export Detailed Report
         </Button>
       </SheetContent>

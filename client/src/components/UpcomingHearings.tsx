@@ -33,7 +33,7 @@ export default function UpcomingHearings() {
   return (
     <Card className="rounded-xl border border-slate-200 bg-white shadow-none h-full flex flex-col justify-between">
       <CardHeader className="pb-3 pt-5 px-5">
-        <CardTitle className="text-xs font-bold tracking-wider text-slate-500 uppercase">
+        <CardTitle className="text-sm font-bold tracking-wider text-slate-500 uppercase">
           Upcoming Hearings
         </CardTitle>
       </CardHeader>
@@ -62,7 +62,7 @@ export default function UpcomingHearings() {
                   <h4 className="text-sm font-semibold text-slate-800 truncate">
                     {item.title}
                   </h4>
-                  <p className="text-xs text-slate-500 truncate mt-0.5">
+                  <p className="text-sm text-slate-500 truncate mt-0.5">
                     {item.location}
                   </p>
                 </div>
@@ -79,7 +79,7 @@ export default function UpcomingHearings() {
 
         <Button
           variant="outline"
-          className="w-full h-10 border-slate-200 text-slate-700 hover:bg-slate-50 font-medium text-xs rounded-lg mt-2 shadow-none"
+          className="w-full h-10 border-slate-200 text-slate-700 hover:bg-slate-50 font-medium text-sm rounded-lg mt-2 shadow-none"
         >
           Full Schedule
         </Button>

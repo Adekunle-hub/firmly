@@ -42,14 +42,14 @@ export default function DocumentCard({ file }: DocumentCardProps) {
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end" className="w-48 bg-white border border-slate-100 p-1 rounded-xl shadow-xl">
-              <DropdownMenuItem className="text-xs font-semibold text-slate-600 py-1.5 rounded-lg cursor-pointer">Open</DropdownMenuItem>
-              <DropdownMenuItem className="text-xs font-semibold text-slate-600 py-1.5 rounded-lg cursor-pointer">Download</DropdownMenuItem>
-              <DropdownMenuItem className="text-xs font-semibold text-slate-600 py-1.5 rounded-lg cursor-pointer">Rename</DropdownMenuItem>
+              <DropdownMenuItem className="text-sm font-semibold text-slate-600 py-1.5 rounded-lg cursor-pointer">Open</DropdownMenuItem>
+              <DropdownMenuItem className="text-sm font-semibold text-slate-600 py-1.5 rounded-lg cursor-pointer">Download</DropdownMenuItem>
+              <DropdownMenuItem className="text-sm font-semibold text-slate-600 py-1.5 rounded-lg cursor-pointer">Rename</DropdownMenuItem>
               
               {/* TRIGGER SHARE MODAL STATE */}
               <DropdownMenuItem 
                 onClick={() => setIsShareOpen(true)}
-                className="text-xs font-semibold text-slate-600 py-1.5 rounded-lg cursor-pointer"
+                className="text-sm font-semibold text-slate-600 py-1.5 rounded-lg cursor-pointer"
               >
                 Share
               </DropdownMenuItem>
@@ -59,20 +59,20 @@ export default function DocumentCard({ file }: DocumentCardProps) {
               {/* TRIGGER DOCUSIGN MODAL STATE */}
               <DropdownMenuItem 
                 onClick={() => setIsDocuSignOpen(true)}
-                className="text-xs font-semibold text-slate-600 py-1.5 rounded-lg cursor-pointer"
+                className="text-sm font-semibold text-slate-600 py-1.5 rounded-lg cursor-pointer"
               >
                 Execute with Docusign
               </DropdownMenuItem>
               
               <DropdownMenuSeparator className="bg-slate-50" />
-              <DropdownMenuItem className="text-xs font-bold text-red-600 py-1.5 rounded-lg cursor-pointer focus:bg-red-50 focus:text-red-600">Delete</DropdownMenuItem>
+              <DropdownMenuItem className="text-sm font-bold text-red-600 py-1.5 rounded-lg cursor-pointer focus:bg-red-50 focus:text-red-600">Delete</DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
         </div>
 
         {/* Text Details Framework View Body */}
         <div>
-          <h4 className="text-xs font-bold text-slate-900 truncate">{file.name}</h4>
+          <h4 className="text-sm font-bold text-slate-900 truncate">{file.name}</h4>
           <p className="text-[10px] font-semibold text-slate-400 mt-0.5">{file.type}</p>
         </div>
 

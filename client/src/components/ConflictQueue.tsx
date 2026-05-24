@@ -47,7 +47,7 @@ export default function ConflictQueue() {
         </div>
         <Link
           href="/dashboard/conflicts"
-          className="text-xs font-medium text-[#1a7a4a] hover:underline"
+          className="text-sm font-medium text-[#1a7a4a] hover:underline"
         >
           View All
         </Link>
@@ -98,7 +98,7 @@ export default function ConflictQueue() {
                   <Button
                     variant="outline"
                     size="sm"
-                    className="h-7 rounded-md border-slate-200 px-3 text-xs text-slate-600 hover:border-[#1a7a4a] hover:text-[#1a7a4a]"
+                    className="h-7 rounded-md border-slate-200 px-3 text-sm text-slate-600 hover:border-[#1a7a4a] hover:text-[#1a7a4a]"
                   >
                     Resolve
                   </Button>
